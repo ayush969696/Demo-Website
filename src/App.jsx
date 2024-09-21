@@ -1,10 +1,9 @@
-// src/App.js
-
 import React, { useState, useEffect } from 'react';
 import AboutUs from './components/AboutUs';
 import BrandPanel from './components/BrandPanel';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
+import Services from './components/Services';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false); 
@@ -23,7 +22,7 @@ function App() {
       <HeroSection darkMode={darkMode} />
       <BrandPanel darkMode={darkMode} />
       <AboutUs darkMode={darkMode} />
-      {/* Add other components like Footer if needed */}
+      <Services />
     </div>
   );
 }
