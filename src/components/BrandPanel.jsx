@@ -13,7 +13,6 @@ function BrandPanel({ darkMode }) {
       <a target="_blank" href="">
         <i className="fa-brands fa-shopify text-4xl"></i>
       </a>
-
       <a target="_blank" href="">
         {darkMode ? (
           <img src={netflix} alt="Netflix" className="w-24 h-auto" />
