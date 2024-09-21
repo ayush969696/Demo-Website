@@ -9,3 +9,21 @@
     background-color: #39f;
     color: white;
 }
+.brand-panel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .brand-panel img {
+    height: auto;
+    max-width: 100%; /* Ensure images are responsive */
+  }
+  
+  @media (max-width: 640px) {
+    .brand-panel img {
+      width: 20%; /* Adjust as necessary */
+    }
+  }
+  

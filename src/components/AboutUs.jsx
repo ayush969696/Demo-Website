@@ -11,7 +11,7 @@ function AboutUs({darkMode}) {
           <div className="col-span-3">
             <Article
               number="01"
-              icon="unicon-download-study"
+              icon="fa-regular fa-address-card"
               title="Strategy Development"
               description="Crafting long-term goals and competitive strategies."
             />
@@ -26,7 +26,7 @@ function AboutUs({darkMode}) {
           <div className="col-span-3">
             <Article
               number="02"
-              icon="unicon-certificate"
+              icon="fa-solid fa-chart-line"
               title="Operational Improvement"
               description="Streamlining processes for efficiency and productivity."
             />
@@ -38,7 +38,7 @@ function AboutUs({darkMode}) {
             <div className="col-span-3">
               <Article
                 number="03"
-                icon="unicon-policy"
+                icon="fa-solid fa-business-time"
                 title="Financial Advisory"
                 description="Managing budgets and financial planning effectively."
               />
@@ -59,7 +59,7 @@ function AboutUs({darkMode}) {
             <div className="col-span-3">
               <Article
                 number="04"
-                icon="unicon-collaborate"
+                icon="fa-solid fa-people-roof"
                 title="Change Management"
                 description="Facilitating smooth transitions and organizational change."
               />
@@ -78,7 +78,7 @@ const Article = ({ number, icon, title, description }) => (
     </span>
     <div className="flex flex-col mt-auto gap-4">
       <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-md">
-        <i className={`icon-${icon} text-2xl text-primary`}></i>
+        <i className={`${icon} text-2xl text-primary`}></i>
       </div>
       <h5 className="text-3xl font-semibold">{title}</h5>
       <p className="text-xl text-black">{description}</p>

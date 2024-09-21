@@ -3,7 +3,9 @@ export default {
   darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      translate: ['responsive', 'hover', 'focus'],
+    },
     fontFamily: {
       "Montserrat": "Montserrat",
       "Inter": "Inter"
