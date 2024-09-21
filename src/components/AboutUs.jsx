@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 import aboutUs from "../assets/aboutUs.jpg";
+import { RiArrowRightSLine } from "react-icons/ri";
 
-function AboutUs() {
+function AboutUs({darkMode}) {
   return (
-    <section className="w-full py-12 font-Montserrat">
-      <div className="container mx-auto max-w-[90%]">
-        <div className="grid grid-cols-12 gap-12">
+    <section className="w-full py-12 ">
+      <div className="container mx-auto max-w-[88%]">
+        <div className="grid grid-cols-12 gap-2">
           {/* First Row: 01 Card, About Us, 02 Card */}
-          <div className="col-span-4">
+          <div className="col-span-3">
             <Article
               number="01"
               icon="unicon-download-study"
@@ -17,12 +18,12 @@ function AboutUs() {
           </div>
 
           {/* About Us Section */}
-          <div className="col-span-4 flex flex-col justify-center items-center text-center">
-            <SectionHeader />
+          <div className="col-span-6 flex flex-col justify-center items-center text-center">
+            <SectionHeader darkMode={darkMode} />
           </div>
 
           {/* 02 Card */}
-          <div className="col-span-4">
+          <div className="col-span-3">
             <Article
               number="02"
               icon="unicon-certificate"
@@ -32,9 +33,9 @@ function AboutUs() {
           </div>
 
           {/* Second Row: 03 Card, Image, 04 Card */}
-          <div className="col-span-12 grid grid-cols-12 gap-12 mt-12">
+          <div className="col-span-12 grid grid-cols-12 gap-8 mt-6">
             {/* 03 Card */}
-            <div className="col-span-4">
+            <div className="col-span-3">
               <Article
                 number="03"
                 icon="unicon-policy"
@@ -44,10 +45,10 @@ function AboutUs() {
             </div>
 
             {/* Image */}
-            <div className="col-span-4">
-              <div className="panel relative rounded overflow-hidden h-full">
+            <div className="col-span-6">
+              <div className="panel relative overflow-hidden h-full">
                 <img
-                  className="object-cover w-[750px] h-[500px] transition-transform duration-500 transform hover:scale-105"
+                  className="object-cover w-[850px] h-[448px] mx-auto rounded-xl transition-transform duration-500 transform hover:scale-105"
                   src={aboutUs}
                   alt="About us"
                 />
@@ -55,7 +56,7 @@ function AboutUs() {
             </div>
 
             {/* 04 Card */}
-            <div className="col-span-4">
+            <div className="col-span-3">
               <Article
                 number="04"
                 icon="unicon-collaborate"
@@ -71,36 +72,44 @@ function AboutUs() {
 }
 
 const Article = ({ number, icon, title, description }) => (
-  <article className="about-item flex flex-col p-8 bg-[#f6f6f7] rounded-lg text-left h-full">
-    <span className="text-6xl text-gray-300">{number}</span>
-    <div className="flex flex-col gap-6">
-      <div className="w-20 h-20 flex items-center justify-center rounded-full bg-white shadow-md">
-        <i className={`icon-${icon} text-3xl text-primary`}></i>
+  <article className="about-item w-[350px] flex flex-col px-8 py-16 bg-gray-100 rounded-lg text-left h-[440px] relative">
+    <span className="absolute top-16 right-8 text-7xl font-semibold text-gray-400">
+      {number}
+    </span>
+    <div className="flex flex-col mt-auto gap-4">
+      <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-md">
+        <i className={`icon-${icon} text-2xl text-primary`}></i>
       </div>
-      <h5 className="text-2xl font-semibold">{title}</h5>
-      <p className="text-lg text-gray-600">{description}</p>
+      <h5 className="text-3xl font-semibold">{title}</h5>
+      <p className="text-xl text-black">{description}</p>
     </div>
   </article>
 );
 
-const SectionHeader = () => (
+const SectionHeader = ({darkMode}) => (
   <div className="text-center">
-    <span className="text-xl w-40 bg-[#f6f6f7] mb-6 p-3 mx-auto rounded-lg block text-[#101011]">About Us</span>
-    <h3 className="text-5xl font-bold mb-6 max-w-xl mx-auto">
+    <span className="text-xl w-40 bg-[#f6f6f7] mb-8 p-3 mx-auto rounded-lg block text-[#101011]">
+      About Us
+    </span>
+    <h3 className="text-6xl font-bold mb-6 max-w-2xl mx-auto">
       Globally Recruitment and Consultation
     </h3>
-    <div className="flex gap-6 justify-center mt-4">
+    <div className="flex gap-6 justify-center items-center mt-8">
       <a
-        className="btn btn-primary px-8 py-3 rounded-lg text-white"
-        href="/html/innovar/main/page-about"
+        href="#get-in-touch"
+        className={`px-8 py-[18px] text-xl font-semibold rounded-xl ${
+          darkMode ? "bg-gray-50  text-black " : "text-white bg-[#023363]"
+        } hover:${
+          darkMode ? "bg-gray-200" : "bg-[#022040]"
+        } transition duration-500`}
       >
         Discover more
       </a>
       <a
-        className="btn btn-outline px-8 py-3 rounded-lg text-primary border-primary"
-        href="/html/innovar/main/page-contact"
+        className="btn flex items-center btn-outline px-8 py-3 text-2xl font-semibold rounded-lg text-primary border-primary"
+        href="#"
       >
-        Let's talk <i className="icon-chevron-right ml-2"></i>
+        Let's talk <RiArrowRightSLine size={30}/>
       </a>
     </div>
   </div>

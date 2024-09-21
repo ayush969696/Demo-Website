@@ -17,12 +17,12 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className="bg-white dark:bg-[#010d19] text-gray-900 dark:text-white transition-colors duration-300 font-Montserrat">
+    <div className="bg-white dark:bg-[#010d19] text-gray-900 px-8 dark:text-white transition-colors duration-300 font-Montserrat">
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      <HeroSection />
-      {/* <BrandPanel /> */}
+      <HeroSection darkMode={darkMode} />
+      <BrandPanel />
     
-      <AboutUs />
+      <AboutUs darkMode={darkMode} />
     </div>
   );
 }

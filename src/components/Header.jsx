@@ -9,7 +9,7 @@ const Header = ({ darkMode, setDarkMode }) => {
 
   return (
     <header
-      className={` w-full z-50 px-4 lg:px-28 lg:pt-6 pb-4 py-3 ${
+      className={` w-full z-50 px-4 lg:px-[98px] lg:pt-6 pb-4 py-3 ${
         darkMode ? "bg-[#010d19]" : "bg-white"
       }`}
     >
@@ -25,7 +25,7 @@ const Header = ({ darkMode, setDarkMode }) => {
         <nav className="hidden md:flex items-center space-x-10">
           <a
             href="#services"
-            className={`text-xl font-medium hover:text-gray-500 transition ${
+            className={`text-xl font-semibold hover:text-gray-500 transition ${
               darkMode ? "text-white" : "text-black"
             }`}
           >
@@ -33,7 +33,7 @@ const Header = ({ darkMode, setDarkMode }) => {
           </a>
           <a
             href="#Case-Studies"
-            className={`text-xl font-medium hover:text-gray-500 transition ${
+            className={`text-xl font-semibold hover:text-gray-500 transition ${
               darkMode ? "text-white" : "text-black"
             }`}
           >
@@ -41,7 +41,7 @@ const Header = ({ darkMode, setDarkMode }) => {
           </a>
           <a
             href="#Insights"
-            className={`text-xl font-medium hover:text-gray-500 transition ${
+            className={`text-xl font-semibold hover:text-gray-500 transition ${
               darkMode ? "text-white" : "text-black"
             }`}
           >
@@ -49,7 +49,7 @@ const Header = ({ darkMode, setDarkMode }) => {
           </a>
           <a
             href="#About"
-            className={`text-xl font-medium hover:text-gray-500 transition ${
+            className={`text-xl font-semibold hover:text-gray-500 transition ${
               darkMode ? "text-white" : "text-black"
             }`}
           >
@@ -62,7 +62,7 @@ const Header = ({ darkMode, setDarkMode }) => {
           <a
             href="#get-in-touch"
             className={`px-6 py-[14px] text-xl font-semibold rounded-xl ${
-              darkMode ? "bg-gray-50  text-black " : "text-white bg-[#022B54]"
+              darkMode ? "bg-gray-50  text-black " : "text-white bg-[#023363]"
             } hover:${darkMode ? "bg-gray-200" : "bg-[#022040]"} transition duration-500`}
           >
             Get in touch
@@ -126,7 +126,7 @@ const Header = ({ darkMode, setDarkMode }) => {
           <nav className="flex flex-col space-y-6 w-full">
             <a
               href="#home"
-              className={`text-lg font-medium hover:text-gray-500 transition ${
+              className={`text-lg font-semibold hover:text-gray-500 transition ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
@@ -134,7 +134,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             </a>
             <a
               href="#services"
-              className={`text-lg font-medium hover:text-gray-500 transition ${
+              className={`text-lg font-semibold hover:text-gray-500 transition ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
@@ -142,7 +142,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             </a>
             <a
               href="#case-studies"
-              className={`text-lg font-medium hover:text-gray-500 transition ${
+              className={`text-lg font-semibold hover:text-gray-500 transition ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
@@ -150,7 +150,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             </a>
             <a
               href="#about"
-              className={`text-lg font-medium hover:text-gray-500 transition ${
+              className={`text-lg font-semibold hover:text-gray-500 transition ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
@@ -158,7 +158,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             </a>
             <a
               href="#blog"
-              className={`text-lg font-medium hover:text-gray-500 transition ${
+              className={`text-lg font-semibold hover:text-gray-500 transition ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
@@ -166,7 +166,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             </a>
             <a
               href="#pricing"
-              className={`text-lg font-medium hover:text-gray-500 transition ${
+              className={`text-lg font-semibold hover:text-gray-500 transition ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
@@ -174,7 +174,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             </a>
             <a
               href="#contact"
-              className={`text-lg font-medium hover:text-gray-500 transition ${
+              className={`text-lg font-semibold hover:text-gray-500 transition ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
@@ -182,7 +182,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             </a>
             <a
               href="#shop"
-              className={`text-lg font-medium hover:text-gray-500 transition ${
+              className={`text-lg font-semibold hover:text-gray-500 transition ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
@@ -190,7 +190,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             </a>
             <a
               href="#sign-in"
-              className={`text-lg font-medium mt-2 hover:text-gray-500 transition ${
+              className={`text-lg font-semibold mt-2 hover:text-gray-500 transition ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
@@ -198,7 +198,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             </a>
             <a
               href="#sign-up"
-              className={`text-lg font-medium mt-2 hover:text-gray-500 transition ${
+              className={`text-lg font-semibold mt-2 hover:text-gray-500 transition ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
@@ -206,7 +206,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             </a>
             <a
               href="#terms"
-              className={`text-lg font-medium mt-2 hover:text-gray-500 transition ${
+              className={`text-lg font-semibold mt-2 hover:text-gray-500 transition ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
@@ -214,7 +214,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             </a>
             <a
               href="#privacy"
-              className={`text-lg font-medium mt-2 hover:text-gray-500 transition ${
+              className={`text-lg font-semibold mt-2 hover:text-gray-500 transition ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
