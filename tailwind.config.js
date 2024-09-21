@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      "Poppins": "Poppins"
+      "Poppins": "Poppins",
+      "Montserrat": "Montserrat"
     }
   },
   plugins: [],
