@@ -84,7 +84,7 @@ const Article = ({ number, icon, title, description }) => (
       <p className="text-md md:text-xl text-black">{description}</p>
     </div>
   </article>
-);
+); 
 
 const SectionHeader = ({ darkMode }) => (
   <div className="text-center">
