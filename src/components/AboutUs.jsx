@@ -90,7 +90,7 @@ function AboutUs({ darkMode }) {
             />
           </div>
 
-          {/* About Us Section */}
+          {/* About Us Section */} 
           <div className="col-span-12 md:col-span-6 flex flex-col justify-center items-center text-center mb-8 md:mb-0">
             <SectionHeader darkMode={darkMode} />
           </div>
