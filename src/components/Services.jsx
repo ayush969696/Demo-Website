@@ -17,7 +17,7 @@ function Services() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 p-4 my-6 ">
         <div className="px-8 py-8 rounded-lg text-start  bg-[#023363] hover:translate-y-[-10px] cursor-pointer transition-transform duration-300 ease-in-out font-Inter">
           <i class="fa-brands fa-creative-commons-nd text-4xl bg-[#ffd700] p-4 mb-4 rounded-lg shadow-xl text-[#1a3363]"></i>
-          <h3 className="text-[26px] md:text-[34px] font-semibold my-2 md:my-4 text-white">
+          <h3 className="text-[26px] md:text-[33px] font-semibold my-2 md:my-4 text-white">
             Staffing Solution
           </h3>
           <p className="text-[16px] md:text-[24px] mb-4 md:mb-8 text-white leading-[1.5]">
@@ -30,7 +30,7 @@ function Services() {
         <div className="px-8 py-8 rounded-lg text-start bg-[#f6f6f7] hover:bg-[#023363] text-black hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
           <i class="fa-solid fa-rocket text-4xl bg-[#ffd700] p-4 mb-4 rounded-lg shadow-xl text-[#1a3363]"></i>
 
-          <h3 className="text-[26px] md:text-[34px] font-semibold my-2 md:my-4 ">
+          <h3 className="text-[26px] md:text-[33px] font-semibold my-2 md:my-4 ">
             Strategic Planning
           </h3>
           <p className="text-[16px] md:text-[24px] mb-4 md:mb-8 leading-[1.5]">
@@ -42,7 +42,7 @@ function Services() {
 
         <div className="px-8 py-8 rounded-lg text-start bg-[#f6f6f7] text-black hover:bg-[#023363] hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
         <i class="fa-solid fa-cubes text-4xl bg-[#ffd700] p-4 mb-4 rounded-lg shadow-xl text-[#1a3363]"></i>
-          <h3 className="text-[26px] md:text-[34px] font-semibold my-2 md:my-4 ">
+          <h3 className="text-[26px] md:text-[33px] font-semibold my-2 md:my-4 ">
             Hr Outsourcing
           </h3>
           <p className="text-[16px] md:text-[24px] mb-4 md:mb-8  leading-[1.5]">
@@ -53,7 +53,7 @@ function Services() {
 
         <div className="px-8 py-8 rounded-lg text-start bg-[#f6f6f7] text-black hover:bg-[#023363] hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
           <i class="fa-regular fa-gem text-4xl bg-[#ffd700] p-4 mb-4 rounded-lg shadow-xl text-[#1a3363]"></i>
-          <h3 className="text-[26px] md:text-[34px] font-semibold my-2 md:my-4 ">
+          <h3 className="text-[26px] md:text-[33px] font-semibold my-2 md:my-4 ">
            Talent Acquisition
           </h3>
           <p className="text-[16px] md:text-[24px] mb-4 md:mb-8  leading-[1.5]">
@@ -65,7 +65,7 @@ function Services() {
 
         <div className="px-8 py-8 rounded-lg text-start bg-[#f6f6f7] text-black hover:bg-[#023363] hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
           <i class="fa-regular fa-address-card text-4xl bg-[#ffd700] p-4 mb-4 rounded-lg shadow-xl text-[#1a3363]"></i>
-          <h3 className="text-[26px] md:text-[34px] font-semibold my-2 md:my-4 ">
+          <h3 className="text-[26px] md:text-[33px] font-semibold my-2 md:my-4 ">
           HR Consulting
           </h3>
           <p className="text-[16px] md:text-[24px] mb-4 md:mb-8  leading-[1.5]">
@@ -77,7 +77,7 @@ function Services() {
 
         <div className="px-8 py-8 rounded-lg text-start bg-[#f6f6f7] text-black hover:bg-[#023363] hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
           <i class="fa-solid fa-layer-group text-4xl bg-[#ffd700] p-4 mb-4 rounded-lg shadow-xl text-[#1a3363]"></i>
-          <h3 className="text-[26px] md:text-[34px] font-semibold my-2 md:my-4 ">
+          <h3 className="text-[26px] md:text-[33px] font-semibold my-2 md:my-4 ">
          Improving Resource
           </h3>
           <p className="text-[16px] md:text-[24px] mb-4 md:mb-8  leading-[1.5]">
