@@ -3,13 +3,14 @@ import { RiNetflixFill } from "react-icons/ri";
 import { FaShopify, FaSpotify } from "react-icons/fa";
 import { SiHuawei } from "react-icons/si";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
+import '../App.css'
 
 const testimonials = [
   {
     name: "Mark Zellers",
     role: "Co-Founder",
     company: "Netflix",
-    companyLogo: <RiNetflixFill size={40} />, // Adjusted size for better alignment
+    companyLogo: <RiNetflixFill size={40} />,
     image: "https://unistudio.co/html/innovar/assets/images/avatars/01.png",
     feedback:
       "Working with Innovar has been a game-changer for our business. Their strategic insights and tailored solutions have streamlined our operations and significantly boosted our efficiency. We couldn't be happier with the results.",
@@ -136,7 +137,7 @@ const Testimonials = () => {
   }, [currentIndex]);
 
   return (
-    <div className="md:py-20 py-8 px-2 bg-white">
+    <div className="md:pt-20 md:pb-5 py-8 px-2 bg-white">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0 md:items-end w-full lg:px-24">
         <div className="flex flex-col items-center md:items-start">
           <span className="text-xl text-center w-40 bg-[#f6f6f7] mb-5 p-3 rounded-lg block text-[#101011]">
@@ -170,7 +171,7 @@ const Testimonials = () => {
 
       <div className="relative mt-8 md:px-24">
         <div
-          className="flex space-x-0 sm:space-x-10 overflow-hidden scroll-smooth snap-x snap-mandatory"
+          className="flex space-x-0 sm:space-x-10 overflow-x-auto overflow-hidden scroll-smooth snap-x snap-mandatory hide-scrollbar"
           ref={scrollRef}
         >
           {testimonials.map((testimonial, index) => (

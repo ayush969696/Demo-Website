@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AboutUs from "./components/AboutUs";
+import Articles from "./components/Articles";
 import BrandPanel from "./components/BrandPanel";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
@@ -31,6 +32,7 @@ function App() {
       <PricingCard />
       <Testimonials />
       <SubscribeSection />
+      <Articles />
     </div>
   );
 }

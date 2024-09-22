@@ -43,8 +43,8 @@ const PricingComponent = ({ plan, price, features, popular, tag, isMiddle }) => 
         className={`w-full mt-6 py-4 px-4 rounded-lg text-xl font-semibold ${
           popular
             ? "bg-yellow-500 text-[#023363] hover:bg-yellow-400"
-            : "bg-[#023363] text-white hover:bg-[#022040]"
-        }`}
+            : "bg-[#023363] text-white hover:bg-[#054284]"
+        } transition duration-300 ease-in-out`}
       >
         Try for Free
       </button>
