@@ -15,7 +15,7 @@ function Services() {
       </h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 p-4 my-6 ">
-        <div className="px-8 py-6 rounded-lg text-start  bg-[#023363] hover:translate-y-[-10px] cursor-pointer transition-transform duration-300 ease-in-out font-Inter">
+        <div className="px-8 py-2 rounded-lg text-start  bg-[#023363] hover:translate-y-[-10px] cursor-pointer transition-transform duration-300 ease-in-out font-Inter">
           <i class="fa-brands fa-creative-commons-nd text-4xl bg-[#ffd700] p-4 my-5 rounded-lg shadow-xl text-[#1a3363]"></i>
           <h3 className="text-[26px] md:text-[34px] font-semibold my-2 md:my-4 text-white">
             Staffing Solution
@@ -24,10 +24,10 @@ function Services() {
             Empowering your team dynamics with precision talent matching. Our
             staffing solutions ensure the right fit.
           </p>
-          <i class="uil uil-arrow-up-right text-4xl text-white "></i>
+          <i class="uil uil-arrow-up-right text-4xl text-white"></i>
         </div>
 
-        <div className="px-8 py-6 rounded-lg text-start bg-[#f6f6f7] hover:bg-[#023363] text-black hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
+        <div className="px-8 py-2 rounded-lg text-start bg-[#f6f6f7] hover:bg-[#023363] text-black hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
           <i class="fa-solid fa-rocket text-4xl bg-[#ffd700] p-4 my-5 rounded-lg shadow-xl text-[#1a3363]"></i>
 
           <h3 className="text-[26px] md:text-[34px] font-semibold my-2 md:my-4 ">
@@ -40,7 +40,7 @@ function Services() {
           <i class="uil uil-arrow-up-right text-4xl"></i>
         </div>
 
-        <div className="px-8 py-6 rounded-lg text-start bg-[#f6f6f7] text-black hover:bg-[#023363] hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
+        <div className="px-8 py-2 rounded-lg text-start bg-[#f6f6f7] text-black hover:bg-[#023363] hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
         <i class="fa-solid fa-cubes text-4xl bg-[#ffd700] p-4 my-5 rounded-lg shadow-xl text-[#1a3363]"></i>
           <h3 className="text-[26px] md:text-[34px] font-semibold my-2 md:my-4 ">
             Hr Outsourcing
@@ -51,7 +51,7 @@ function Services() {
           <i class="uil uil-arrow-up-right text-4xl  "></i>
         </div>
 
-        <div className="px-8 py-6 rounded-lg text-start bg-[#f6f6f7] text-black hover:bg-[#023363] hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
+        <div className="px-8 py-2 rounded-lg text-start bg-[#f6f6f7] text-black hover:bg-[#023363] hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
           <i class="fa-regular fa-gem text-4xl bg-[#ffd700] p-4 my-5 rounded-lg shadow-xl text-[#1a3363]"></i>
           <h3 className="text-[26px] md:text-[34px] font-semibold my-2 md:my-4 ">
            Talent Acquisition
@@ -63,7 +63,7 @@ function Services() {
           <i class="uil uil-arrow-up-right text-4xl  "></i>
         </div>
 
-        <div className="px-8 py-6 rounded-lg text-start bg-[#f6f6f7] text-black hover:bg-[#023363] hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
+        <div className="px-8 py-2 rounded-lg text-start bg-[#f6f6f7] text-black hover:bg-[#023363] hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
           <i class="fa-regular fa-address-card text-4xl bg-[#ffd700] p-4 my-5 rounded-lg shadow-xl text-[#1a3363]"></i>
           <h3 className="text-[26px] md:text-[34px] font-semibold my-2 md:my-4 ">
           HR Consulting
@@ -75,7 +75,7 @@ function Services() {
           <i class="uil uil-arrow-up-right text-4xl  "></i>
         </div>
 
-        <div className="px-8 py-6 rounded-lg text-start bg-[#f6f6f7] text-black hover:bg-[#023363] hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
+        <div className="px-8 py-2 rounded-lg text-start bg-[#f6f6f7] text-black hover:bg-[#023363] hover:text-white hover:translate-y-[-10px] cursor-pointer transition duration-300 ease-in-out font-Montserrat">
           <i class="fa-solid fa-layer-group text-4xl bg-[#ffd700] p-4 my-5 rounded-lg shadow-xl text-[#1a3363]"></i>
           <h3 className="text-[26px] md:text-[34px] font-semibold my-2 md:my-4 ">
          Improving Resource
