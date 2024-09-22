@@ -115,8 +115,8 @@ function AboutUs({ darkMode }) {
             />
           </div>
 
-          <div className="col-span-12 md:col-span-6 mb-8 md:mb-0 md: ml-8">
-            <div className="panel relative overflow-hidden h-full">
+          <div className="col-span-12 md:col-span-6 mb-8 md:mb-0 md: ml-16">
+            <div className="panel  overflow-hidden h-full">
               <img
                 className="object-cover w-full md:w-[850px] h-[300px] md:h-[435px] mx-auto rounded-xl transition-transform duration-500 transform hover:scale-105"
                 src={aboutUs}
