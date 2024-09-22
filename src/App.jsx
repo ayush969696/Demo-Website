@@ -4,6 +4,7 @@ import BrandPanel from "./components/BrandPanel";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import PricingCard from "./components/PricingCard";
+import Project from "./components/Project";
 import Services from "./components/Services";
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
       <BrandPanel darkMode={darkMode} />
       <AboutUs darkMode={darkMode} />
       <Services />
-      <PricingCard
+      <Project />
+      {/* <PricingCard
         planType="Agency"
         price="99"
         description="Value for money and can be upgraded."
@@ -35,14 +37,17 @@ function App() {
           "20GB individual data each user",
           "Basic chat and email support",
         ]}
-        bgColor="bg-blue-900"
+        bgColor="bg-[#023363]"
         textColor="white"
         badgeColor="bg-yellow-400"
         badgeTextColor="text-black"
         buttonColor="bg-yellow-400"
-        buttonHoverColor="hover:bg-yellow-500"
+        buttonHoverColor="hover:bg-yellow-300"
         isPopular={true}
-      />
+      /> */}
+
+    <PricingCard />      
+     
     </div>
   );
 }

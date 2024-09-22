@@ -38,7 +38,7 @@ function HeroSection({darkMode}) {
         <img
           src={arrow1}
           alt="Decorative arrow 1"
-          className="absolute left-[20%] bottom-[-8%] w-[160px] hidden lg:block"
+          className="absolute left-[25%] bottom-[-8%] w-[160px] hidden lg:block"
         />
       </div>
     </section>

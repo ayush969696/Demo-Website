@@ -3,7 +3,7 @@ import { GoArrowRight } from "react-icons/go";
 
 function Services() {
   return (
-    <div className="section-header panel lg:px-24 my-24 flex flex-col items-center sm:items-start text-center sm:text-left mx-auto sm:mx-0 gap-2 xl:gap-3">
+    <div className="section-header panel lg:px-24 md:my-24 my-12 flex flex-col items-center sm:items-start text-center sm:text-left mx-auto sm:mx-0 gap-2 xl:gap-3">
       <span className="text-xl text-center w-40 bg-[#f6f6f7] mb-5 p-3 rounded-lg block text-[#101011]">
         Services
       </span>
