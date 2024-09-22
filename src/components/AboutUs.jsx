@@ -79,61 +79,62 @@ function AboutUs({ darkMode }) {
         </div>
 
         {/* Desktop Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:mt-6 hidden md:grid">
-          {/* First Row: 01 Card, About Us, 02 Card */}
-          <div className="col-span-12 md:col-span-3 mb-8 md:mb-0">
-            <Article
-              number="01"
-              icon="fa-regular fa-address-card"
-              title="Strategy Development"
-              description="Crafting long-term goals and competitive strategies."
-            />
-          </div>
+<div className="grid grid-cols-12 gap-8 md:mt-6">
+  {/* First Row: 01 Card, About Us, 02 Card */}
+  <div className="col-span-12 md:col-span-3">
+    <Article
+      number="01"
+      icon="fa-regular fa-address-card"
+      title="Strategy Development"
+      description="Crafting long-term goals and competitive strategies."
+    />
+  </div>
 
-          {/* About Us Section */} 
-          <div className="col-span-12 md:col-span-6 flex flex-col justify-center items-center text-center mb-8 md:mb-0">
-            <SectionHeader darkMode={darkMode} />
-          </div>
+  {/* About Us Section */}
+  <div className="col-span-12 md:col-span-6 flex flex-col justify-center items-center text-center">
+    <SectionHeader darkMode={darkMode} />
+  </div>
 
-          {/* 02 Card */}
-          <div className="col-span-12 md:col-span-3 mb-8 md:mb-0">
-            <Article
-              number="02"
-              icon="fa-solid fa-chart-line"
-              title="Operational Improvement"
-              description="Streamlining processes for efficiency and productivity."
-            />
-          </div>
+  {/* 02 Card */}
+  <div className="col-span-12 md:col-span-3">
+    <Article
+      number="02"
+      icon="fa-solid fa-chart-line"
+      title="Operational Improvement"
+      description="Streamlining processes for efficiency and productivity."
+    />
+  </div>
 
-          {/* Second Row: 03 Card, Image, 04 Card */}
-          <div className="col-span-12 md:col-span-3 mb-8 md:mb-0">
-            <Article
-              number="03"
-              icon="fa-solid fa-business-time"
-              title="Financial Advisory"
-              description="Managing budgets and financial planning effectively."
-            />
-          </div>
+  {/* Second Row: 03 Card, Image, 04 Card */}
+  <div className="col-span-12 md:col-span-3">
+    <Article
+      number="03"
+      icon="fa-solid fa-business-time"
+      title="Financial Advisory"
+      description="Managing budgets and financial planning effectively."
+    />
+  </div>
 
-          <div className="col-span-12 md:col-span-6 mb-8 md:mb-0 md: ml-16">
-            <div className="panel  overflow-hidden h-full">
-              <img
-                className="object-cover w-full md:w-[850px] h-[300px] md:h-[435px] mx-auto rounded-xl transition-transform duration-500 transform hover:scale-105"
-                src={aboutUs}
-                alt="About us"
-              />
-            </div>
-          </div>
+  <div className="col-span-12 md:col-span-6 rounded-xl">
+    <div className="panel relative overflow-hidden h-full rounded-lg">
+      <img
+        className="object-cover w-full md:w-[850px] h-[300px] md:h-[435px] mx-auto rounded-lg  transition-transform duration-500 transform hover:scale-105"
+        src={aboutUs}
+        alt="About us"
+      />
+    </div>
+  </div>
 
-          <div className="col-span-12 md:col-span-3 mb-8 md:mb-0">
-            <Article
-              number="04"
-              icon="fa-solid fa-people-roof"
-              title="Change Management"
-              description="Facilitating smooth transitions and organizational change."
-            />
-          </div>
-        </div>
+  <div className="col-span-12 md:col-span-3">
+    <Article
+      number="04"
+      icon="fa-solid fa-people-roof"
+      title="Change Management"
+      description="Facilitating smooth transitions and organizational change."
+    />
+  </div>
+</div>
+
 
       
       </div>

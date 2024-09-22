@@ -25,9 +25,9 @@ function App() {
       <AboutUs darkMode={darkMode} />
       <Services />
       <PricingCard
-        planType="Pro"
-        price="49"
-        description="All other plans features and options."
+        planType="Agency"
+        price="99"
+        description="Value for money and can be upgraded."
         features={[
           "Up to 10 individual users",
           "Basic reporting and analytics",
@@ -35,7 +35,13 @@ function App() {
           "20GB individual data each user",
           "Basic chat and email support",
         ]}
-        bgColor="bg-gray-200"
+        bgColor="bg-blue-900"
+        textColor="white"
+        badgeColor="bg-yellow-400"
+        badgeTextColor="text-black"
+        buttonColor="bg-yellow-400"
+        buttonHoverColor="hover:bg-yellow-500"
+        isPopular={true}
       />
     </div>
   );
