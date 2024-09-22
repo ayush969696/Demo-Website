@@ -3,7 +3,7 @@ import { GoArrowRight } from "react-icons/go";
 import { GoArrowLeft } from "react-icons/go";
 import "tailwindcss/tailwind.css";
 
-const testimonials = [
+const allProjects = [
   {
     name: "Dreamy vision",
     text1: "Strategy Planning",
@@ -53,14 +53,14 @@ function Project({darkMode}) {
         behavior: "smooth",
       });
       setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+        prevIndex === 0 ? allProjects.length - 1 : prevIndex - 1
       );
     }
   };
 
   const handleNext = () => {
     if (scrollRef.current) {
-      if (currentIndex === testimonials.length - 1) {
+      if (currentIndex === allProjects.length - 1) {
         scrollRef.current.scrollTo({
           left: 0,
           behavior: "smooth",
@@ -116,7 +116,7 @@ function Project({darkMode}) {
               ref={scrollRef}
               className="flex space-x-[20px] overflow-hidden scrollbar-hide snap-x pl-2 gap-2"
             >
-              {testimonials.map((testimonial, index) => (
+              {allProjects.map((testimonial, index) => (
                 <div
                   key={index}
                   className="snap-center flex-shrink-0 w-[300px] md:w-[450px] "

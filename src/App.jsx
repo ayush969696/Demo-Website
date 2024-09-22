@@ -6,6 +6,8 @@ import HeroSection from "./components/HeroSection";
 import PricingCard from "./components/PricingCard";
 import Project from "./components/Project";
 import Services from "./components/Services";
+import SubscribeSection from "./components/SubscribeSection";
+import Testimonials from "./components/TestimonialCard";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -26,28 +28,9 @@ function App() {
       <AboutUs darkMode={darkMode} />
       <Services />
       <Project />
-      {/* <PricingCard
-        planType="Agency"
-        price="99"
-        description="Value for money and can be upgraded."
-        features={[
-          "Up to 10 individual users",
-          "Basic reporting and analytics",
-          "Project Management",
-          "20GB individual data each user",
-          "Basic chat and email support",
-        ]}
-        bgColor="bg-[#023363]"
-        textColor="white"
-        badgeColor="bg-yellow-400"
-        badgeTextColor="text-black"
-        buttonColor="bg-yellow-400"
-        buttonHoverColor="hover:bg-yellow-300"
-        isPopular={true}
-      /> */}
-
-    <PricingCard />      
-     
+      <PricingCard />
+      <Testimonials />
+      <SubscribeSection />
     </div>
   );
 }

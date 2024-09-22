@@ -1,17 +1,19 @@
 import React from "react";
 
-const PricingComponent = ({ plan, price, features, popular, tag }) => {
+const PricingComponent = ({ plan, price, features, popular, tag, isMiddle }) => {
   return (
     <div
-      className={`w-full font-Inter max-w-sm p-8 rounded-xl shadow-md border  border-gray-200 ${
+      className={`w-full font-Inter ${
+        isMiddle ? "max-w-md  p-10" : "max-w-sm  p-8"
+      } rounded-xl ${
         popular ? "bg-[#023363] text-white" : "bg-[#f6f6f7]"
       }`}
     >
-      <div className="flex justify-between items-center ">
+      <div className="flex justify-between items-center">
         <span
           className={`${
             popular ? "bg-yellow-400 text-[#023363]" : "bg-gray-200"
-          } text-lg px-4 py-1 rounded-lg `}
+          } text-lg px-4 py-1 rounded-lg`}
         >
           {tag}
         </span>
@@ -20,7 +22,7 @@ const PricingComponent = ({ plan, price, features, popular, tag }) => {
         )}
       </div>
       <div className="mt-4 pb-6">
-        <h2 className="text-[70px] font-bold ">
+        <h2 className="text-[70px] font-bold">
           {price}
           <span className="text-3xl font-semibold"> / mo</span>
         </h2>
@@ -31,7 +33,7 @@ const PricingComponent = ({ plan, price, features, popular, tag }) => {
         {features.map((feature, index) => (
           <li key={index} className="flex items-center gap-3">
             <span className="bg-gray-200 rounded-full flex items-center justify-center p-2">
-              <i class="fa-solid fa-check text-[#023363]"></i>
+              <i className="fa-solid fa-check text-[#023363]"></i>
             </span>
             <h1>{feature}</h1>
           </li>
@@ -99,20 +101,24 @@ const PricingCard = () => {
   ];
 
   return (
-    <div className="py-12  w-full">
+    <div className="py-12 w-full">
       <span className="text-xl text-center w-40 mx-auto bg-[#f6f6f7] mb-5 p-3 rounded-lg block text-[#101011]">
         Pricing
       </span>
       <h3
-        className="text-3xl text-center sm:text-3xl xl:text-[55px] pb-20  font-bold px-4 md:px-0"
+        className="text-3xl text-center sm:text-3xl xl:text-[55px] pb-14 font-bold px-4 md:px-0"
         style={{ lineHeight: "1.2" }}
       >
-        We’ve offred the <br className="hidden sm:block" />
+        We’ve offered the <br className="hidden sm:block" />
         best pricing for you
       </h3>
       <div className="flex flex-col md:flex-row justify-center gap-8 py-1 px-4">
         {pricingPlans.map((plan, index) => (
-          <PricingComponent key={index} {...plan} />
+          <PricingComponent
+            key={index}
+            {...plan}
+            isMiddle={index === 1} // Pass isMiddle prop
+          />
         ))}
       </div>
     </div>
