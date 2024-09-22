@@ -79,7 +79,7 @@ function AboutUs({ darkMode }) {
         </div>
 
         {/* Desktop Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:mt-6 hidden md:grid">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:mt-6 hidden md:grid">
           {/* First Row: 01 Card, About Us, 02 Card */}
           <div className="col-span-12 md:col-span-3 mb-8 md:mb-0">
             <Article
@@ -115,10 +115,10 @@ function AboutUs({ darkMode }) {
             />
           </div>
 
-          <div className="col-span-12 md:col-span-6 mb-8 md:mb-0 md: ml-6">
+          <div className="col-span-12 md:col-span-6 mb-8 md:mb-0 md: ml-8">
             <div className="panel relative overflow-hidden h-full">
               <img
-                className="object-cover w-full md:w-[850px] h-[300px] md:h-[440px] mx-auto rounded-xl transition-transform duration-500 transform hover:scale-105"
+                className="object-cover w-full md:w-[850px] h-[300px] md:h-[435px] mx-auto rounded-xl transition-transform duration-500 transform hover:scale-105"
                 src={aboutUs}
                 alt="About us"
               />
