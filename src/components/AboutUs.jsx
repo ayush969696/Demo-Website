@@ -79,7 +79,7 @@ function AboutUs({ darkMode }) {
         </div>
 
         {/* Desktop Layout */}
-<div className="grid grid-cols-12 gap-6 md:mt-6">
+<div className="grid grid-cols-12 gap-8 md:mt-6">
   {/* First Row: 01 Card, About Us, 02 Card */}
   <div className="col-span-12 md:col-span-3">
     <Article
@@ -118,7 +118,7 @@ function AboutUs({ darkMode }) {
   <div className="col-span-12 md:col-span-6 rounded-xl">
     <div className="panel relative overflow-hidden h-full rounded-lg">
       <img
-        className="object-cover w-full md:w-[860px] h-[300px] md:h-[435px] mx-auto rounded-lg  transition-transform duration-500 transform hover:scale-105"
+        className="object-cover w-full md:w-[850px] h-[300px] md:h-[435px] mx-auto rounded-lg  transition-transform duration-500 transform hover:scale-105"
         src={aboutUs}
         alt="About us"
       />
@@ -134,8 +134,6 @@ function AboutUs({ darkMode }) {
     />
   </div>
 </div>
-
-
       
       </div>
     </section>
@@ -143,7 +141,7 @@ function AboutUs({ darkMode }) {
 }
 
 const Article = ({ number, icon, title, description }) => (
-  <article className="about-item w-full md:w-[320px] flex flex-col px-6 py-12 md:px-8 md:py-16 bg-gray-100 rounded-lg text-left h-auto md:h-[440px] relative">
+  <article className="about-item w-full md:w-[310px] flex flex-col px-6 py-12 md:px-8 md:py-16 bg-gray-100 rounded-lg text-left h-auto md:h-[440px] relative">
     <span className="absolute top-6 md:top-16 right-6 md:right-8 text-5xl md:text-7xl font-semibold  text-gray-400">
       {number}
     </span>
