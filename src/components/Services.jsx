@@ -90,18 +90,17 @@ function Services() {
         </div>
       </div>
 
-      <div className="flex items-center gap-4 px-4 text-[#02337c] cursor-pointer group">
-        <h1 className="text-2xl font-Inter font-medium relative pb-1.5 overflow-hidden">
+      <div className="px-4 py-8 text-[#02337c] cursor-pointer group">
+        <h1 className="flex items-center gap-4 text-2xl font-Inter font-medium relative pb-1.5 overflow-hidden">
           View all services
+          <span className="group-hover:translate-x-1 transition-transform duration-300">
+            <GoArrowRight size={26} />
+          </span>
           <span className="absolute bottom-0 left-0 w-full h-[2px] bg-transparent border border-gray-200 group-hover:bg-black">
             <span className="absolute inset-0 w-0 h-full bg-black  transition-all duration-500 group-hover:w-full"></span>
           </span>
         </h1>
-        <span className="group-hover:translate-x-1 transition-transform duration-300">
-          <GoArrowRight size={26} />
-        </span>
       </div>
-
     </div>
   );
 }
