@@ -143,7 +143,7 @@ function AboutUs({ darkMode }) {
 }
 
 const Article = ({ number, icon, title, description }) => (
-  <article className="about-item w-full md:w-[350px] flex flex-col px-6 py-12 md:px-8 md:py-16 bg-gray-100 rounded-lg text-left h-auto md:h-[440px] relative">
+  <article className="about-item w-full md:w-[320px] flex flex-col px-6 py-12 md:px-8 md:py-16 bg-gray-100 rounded-lg text-left h-auto md:h-[440px] relative">
     <span className="absolute top-6 md:top-16 right-6 md:right-8 text-5xl md:text-7xl font-semibold  text-gray-400">
       {number}
     </span>
