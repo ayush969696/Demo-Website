@@ -79,62 +79,61 @@ function AboutUs({ darkMode }) {
         </div>
 
         {/* Desktop Layout */}
-<div className="grid grid-cols-12 gap-8 md:mt-6">
-  {/* First Row: 01 Card, About Us, 02 Card */}
-  <div className="col-span-12 md:col-span-3">
-    <Article
-      number="01"
-      icon="fa-regular fa-address-card"
-      title="Strategy Development"
-      description="Crafting long-term goals and competitive strategies."
-    />
-  </div>
+        <div className="grid grid-cols-12 gap-8 md:mt-6">
+          {/* First Row: 01 Card, About Us, 02 Card */}
+          <div className="col-span-12 md:col-span-3">
+            <Article
+              number="01"
+              icon="fa-regular fa-address-card"
+              title="Strategy Development"
+              description="Crafting long-term goals and competitive strategies."
+            />
+          </div>
 
-  {/* About Us Section */}
-  <div className="col-span-12 md:col-span-6 flex flex-col justify-center items-center text-center">
-    <SectionHeader darkMode={darkMode} />
-  </div>
+          {/* About Us Section */}
+          <div className="col-span-12 md:col-span-6 flex flex-col justify-center items-center text-center">
+            <SectionHeader darkMode={darkMode} />
+          </div>
 
-  {/* 02 Card */}
-  <div className="col-span-12 md:col-span-3">
-    <Article
-      number="02"
-      icon="fa-solid fa-chart-line"
-      title="Operational Improvement"
-      description="Streamlining processes for efficiency and productivity."
-    />
-  </div>
+          {/* 02 Card */}
+          <div className="col-span-12 md:col-span-3">
+            <Article
+              number="02"
+              icon="fa-solid fa-chart-line"
+              title="Operational Improvement"
+              description="Streamlining processes for efficiency and productivity."
+            />
+          </div>
 
-  {/* Second Row: 03 Card, Image, 04 Card */}
-  <div className="col-span-12 md:col-span-3">
-    <Article
-      number="03"
-      icon="fa-solid fa-business-time"
-      title="Financial Advisory"
-      description="Managing budgets and financial planning effectively."
-    />
-  </div>
+          {/* Second Row: 03 Card, Image, 04 Card */}
+          <div className="col-span-12 md:col-span-3">
+            <Article
+              number="03"
+              icon="fa-solid fa-business-time"
+              title="Financial Advisory"
+              description="Managing budgets and financial planning effectively."
+            />
+          </div>
 
-  <div className="col-span-12 md:col-span-6 rounded-xl">
-    <div className="panel relative overflow-hidden h-full rounded-lg">
-      <img
-        className="object-cover w-full md:w-[850px] h-[300px] md:h-[435px] mx-auto rounded-lg  transition-transform duration-500 transform hover:scale-105"
-        src={aboutUs}
-        alt="About us"
-      />
-    </div>
-  </div>
+          <div className="col-span-12 md:col-span-6  rounded-xl">
+            <div className="panel relative overflow-hidden h-full rounded-lg">
+              <img
+                className="object-cover w-full md:w-[850px] h-[300px] md:h-[435px] rounded-lg  transition-transform duration-500 transform hover:scale-105"
+                src={aboutUs}
+                alt="About us"
+              />
+            </div>
+          </div>
 
-  <div className="col-span-12 md:col-span-3">
-    <Article
-      number="04"
-      icon="fa-solid fa-people-roof"
-      title="Change Management"
-      description="Facilitating smooth transitions and organizational change."
-    />
-  </div>
-</div>
-      
+          <div className="col-span-12 md:col-span-3">
+            <Article
+              number="04"
+              icon="fa-solid fa-people-roof"
+              title="Change Management"
+              description="Facilitating smooth transitions and organizational change."
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -153,7 +152,7 @@ const Article = ({ number, icon, title, description }) => (
       <p className="text-md md:text-xl text-black">{description}</p>
     </div>
   </article>
-); 
+);
 
 const SectionHeader = ({ darkMode }) => (
   <div className="text-center">
@@ -163,25 +162,25 @@ const SectionHeader = ({ darkMode }) => (
     <h3 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 max-w-xl md:max-w-2xl mx-auto">
       Globally Recruitment and Consultation
     </h3>
-      {/* Large Screen Buttons */}
-        <div className="text-center mt-8 hidden md:flex gap-6 justify-center items-center">
-          <a
-            href="#get-in-touch"
-            className={`px-8 py-[18px] text-xl font-semibold rounded-xl ${
-              darkMode ? "bg-gray-50 text-black" : "text-white bg-[#023363]"
-            } hover:${
-              darkMode ? "bg-gray-200" : "bg-[#022040]"
-            } transition duration-500`}
-          >
-            Discover more
-          </a>
-          <a
-            className="btn flex items-center btn-outline px-8 py-3 text-2xl font-semibold rounded-lg text-primary border-primary"
-            href="#"
-          >
-            Let's talk <RiArrowRightSLine size={30} />
-          </a>
-        </div>
+    {/* Large Screen Buttons */}
+    <div className="text-center mt-8 hidden md:flex gap-6 justify-center items-center">
+      <a
+        href="#get-in-touch"
+        className={`px-8 py-[18px] text-xl font-semibold rounded-xl ${
+          darkMode ? "bg-gray-50 text-black" : "text-white bg-[#023363]"
+        } hover:${
+          darkMode ? "bg-gray-200" : "bg-[#022040]"
+        } transition duration-500`}
+      >
+        Discover more
+      </a>
+      <a
+        className="btn flex items-center btn-outline px-8 py-3 text-2xl font-semibold rounded-lg text-primary border-primary"
+        href="#"
+      >
+        Let's talk <RiArrowRightSLine size={30} />
+      </a>
+    </div>
   </div>
 );
 
