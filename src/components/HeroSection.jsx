@@ -7,7 +7,7 @@ function HeroSection() {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <section className="lg:py-24 pt-20 pb-12 bg-transparent">
+    <section className={`lg:py-24 pt-20 pb-12 `}>
       <div
         className={`mx-4 lg:mx-32 my-8 lg:rounded-3xl rounded-lg overflow-hidden lg:h-[650px] relative transition-colors duration-300 ${
           darkMode
@@ -16,7 +16,6 @@ function HeroSection() {
         }`}
       >
         <div className="container mx-auto flex flex-col justify-between lg:flex-row items-center relative h-full">
-          {/* Left Section for Text */}
           <div className="w-full lg:w-1/2 px-6 lg:px-12 pt-12 lg:pt-20 text-center lg:text-left">
             <h1
               className={`text-[32px] lg:text-[60px] font-bold leading-tight transition-colors duration-300 ${

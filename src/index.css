@@ -10,10 +10,6 @@
     color: white;
 }
 
-html, body {
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
-
 header {
   transition: background-color 0.4s ease;
 }
@@ -26,3 +22,27 @@ button {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+
+::-webkit-scrollbar {
+  width: 8px; 
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+}
+
+body {
+  scrollbar-color: #ccc #d4d2d2; 
+}
+
+body.dark-mode {
+  scrollbar-color: #555 #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc; 
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: #555; 
+}

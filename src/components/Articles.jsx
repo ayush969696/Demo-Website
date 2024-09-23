@@ -55,7 +55,7 @@ function Article() {
   };
 
   return (
-    <div className={`section-header panel flex flex-col w-full md:pt-24 pt-4 md:pb-20 pb-6 items-center sm:items-start text-center sm:text-left sm:mx-0 gap-2 xl:gap-3 ${darkMode ? ' text-white' : 'bg-transparent text-black'}`}>
+    <div className={`section-header panel flex flex-col w-full md:pt-24 pt-4 md:pb-20 pb-6 items-center sm:items-start text-center sm:text-left sm:mx-0 gap-2 xl:gap-3 ${darkMode ? 'bg-[#010d19] text-white' : 'bg-white text-black'}`}>
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0 md:items-end w-full lg:px-24">
         <div className="flex flex-col items-center md:items-start">
           <span className={`text-xl text-center w-40 mb-5 p-3 rounded-lg block ${darkMode ? 'bg-gray-900 text-white' : 'bg-[#f6f6f7] text-[#101011]'}`}>

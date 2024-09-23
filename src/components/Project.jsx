@@ -78,7 +78,7 @@ function Project() {
   };
 
   return (
-    <div className="section-header panel flex flex-col w-full md:pt-6 bg-transparent pt-4 md:pb-20 pb-6 items-center sm:items-start text-center sm:text-left sm:mx-0 gap-2 xl:gap-3">
+    <div className={` ${darkMode ? 'bg-[#010d19]' : 'bg-white'} section-header panel flex flex-col w-full md:pt-6 bg-transparent pt-4 md:pb-20 pb-6 items-center sm:items-start text-center sm:text-left sm:mx-0 gap-2 xl:gap-3`}>
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0 md:items-end w-full lg:px-24">
         
         <div className="flex flex-col items-center md:items-start">

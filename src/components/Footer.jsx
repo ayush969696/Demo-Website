@@ -12,7 +12,7 @@ const Footer = () => {
   const { darkMode } = useContext(DarkModeContext); 
 
   return (
-    <footer className={`w-full md:px-24 px-2 md:py-12 py-2`}>
+    <footer className={`w-full md:px-24 px-2 md:py-12 py-2 ${darkMode ? 'bg-[#010d19]' : 'bg-white'}`}>
       <div className="mx-auto">
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-8 py-14 max-w-xs mx-auto sm:max-w-2xl md:max-w-3xl lg:max-w-full">
           <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">

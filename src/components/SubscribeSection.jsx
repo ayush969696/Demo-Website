@@ -6,9 +6,8 @@ const SubscribeSection = () => {
   const { darkMode } = useContext(DarkModeContext); 
 
   return (
-    <div className={`container max-w-full mx-auto px-4 sm:px-4 lg:px-24 py-10 `}>
+    <div className={`container max-w-full mx-auto px-4 sm:px-4 lg:px-24 py-10  ${darkMode ? 'bg-[#010d19]' : 'bg-white'}`}>
       <div className={`relative rounded px-4 py-8 sm:px-6 sm:py-10 lg:px-10 lg:py-12 xl:px-12 overflow-hidden ${darkMode ? 'bg-gray-900' : 'bg-[#f2f5f7]'}`}>
-        {/* Decorative Images */}
         <img
           className="absolute top-0 left-0 w-36 xl:w-48 hidden lg:block"
           src="https://unistudio.co/html/innovar/assets/images/common/circles.svg"
@@ -25,9 +24,7 @@ const SubscribeSection = () => {
           alt="Hero Image"
         />
 
-        {/* Subscription Content */}
         <div className={`flex flex-col justify-center gap-4 sm:gap-6 lg:gap-8 lg:w-2/3 text-center lg:h-[350px] lg:text-left lg:ml-14 ${darkMode ? 'text-white' : 'text-black'}`}>
-          {/* Heading Section */}
           <div className="flex flex-col gap-2 sm:gap-4">
             <h3 className={`text-3xl sm:text-4xl lg:text-4xl font-bold leading-tight ${darkMode ? 'text-white' : 'text-black'}`}>
               Subscribe to our mailing <br className="hidden sm:block" />
@@ -39,9 +36,7 @@ const SubscribeSection = () => {
             </p>
           </div>
 
-          {/* Subscription Form */}
           <form className="flex flex-col sm:flex-row gap-2 sm:gap-3 sm:max-w-[450px] lg:mx-0">
-            {/* Email Input */}
             <div className="relative inline-block w-full">
               <input
                 type="email"
@@ -54,7 +49,6 @@ const SubscribeSection = () => {
               </span>
             </div>
 
-            {/* Subscribe Button */}
             <div className="md:w-32 w-full">
               <a
                 href="/html/innovar/main/sign-up"

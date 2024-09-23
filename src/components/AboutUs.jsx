@@ -7,7 +7,7 @@ function AboutUs() {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <section className={`w-full py-12 ${darkMode ? 'bg-[#010d19] text-white' : 'bg-transparent text-black'}`}>
+    <section className={`w-full py-12 ${darkMode ? 'bg-[#010d19] text-white' : 'bg-white text-black'}`}>
       <div className="container mx-auto lg:max-w-[90%] max-w-full px-4">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
           <div className="col-span-12 text-center mb-4 md:hidden">

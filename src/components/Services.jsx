@@ -6,7 +6,7 @@ function Services() {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className={`section-header panel lg:px-24 md:my-24 my-12 flex flex-col items-center sm:items-start text-center sm:text-left mx-auto sm:mx-0 gap-2 xl:gap-3 ${darkMode ? ' text-white' : 'bg-transparent text-gray-900'}`}>
+    <div className={`section-header panel lg:px-24 md:my-24 my-12 flex flex-col items-center sm:items-start text-center sm:text-left mx-auto sm:mx-0 gap-2 xl:gap-3 ${darkMode ? ' text-white' : 'bg-white text-gray-900'}`}>
       <span className={`text-xl text-center w-40 mb-5 p-3 rounded-lg block ${darkMode ? 'bg-gray-900 text-white' : 'bg-[#f6f6f7] text-[#101011]'}`}>
         Services
       </span>

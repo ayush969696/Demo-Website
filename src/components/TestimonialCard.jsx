@@ -145,7 +145,7 @@ const Testimonials = () => {
   }, [currentIndex]);
 
   return (
-    <div className={`md:pt-20 md:pb-5 py-8 px-2 ${darkMode ? " text-white" : "bg-transparent text-black"}`}>
+    <div className={`md:pt-20 md:pb-5 py-8 px-2 ${darkMode ? 'bg-[#010d19] text-white' : 'bg-white text-black'}`}>
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0 md:items-end w-full lg:px-24">
         <div className="flex flex-col items-center md:items-start">
           <span className={`text-xl text-center w-40 ${darkMode ? "bg-gray-900 text-white" : "bg-[#f6f6f7] text-[#101011]"} mb-5 p-3 rounded-lg block`}>
