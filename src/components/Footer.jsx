@@ -168,30 +168,33 @@ const Footer = () => {
               Office
             </h4>
             <ul className="text-lg font-semibold transition-all duration-500">
-              <li className="mb-4">
+              <li className="mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-location-dot"></i>
+
                 <a
                   href="javascript:;"
                   className="text-gray-800 hover:text-gray-900"
                 >
-                  <i class="fa-solid fa-location-dot"></i>
                   116 Royal ln, London
                 </a>
               </li>
-              <li className="mb-4">
+              <li className="mb-4 flex items-center gap-2">
+              <i class="fa-regular fa-envelope "></i>
+
                 <a
                   href="javascript:;"
                   className="text-gray-800 hover:text-gray-900"
                 >
-                  <i class="fa-regular fa-envelope"></i>
                   Innovar@business.com
                 </a>
               </li>
-              <li className="mb-4">
+              <li className="mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-phone"></i>
+
                 <a
                   href="javascript:;"
                   className="text-gray-800 hover:text-gray-900"
                 >
-                  <i class="fa-solid fa-phone"></i>
                   +123-234-324-917
                 </a>
               </li>
