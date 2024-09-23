@@ -9,7 +9,7 @@ function HeroSection() {
 
   return (
     <section
-      className={`mx-4 md:mx-32 my-8 md:rounded-3xl rounded-lg overflow-hidden md:h-[650px] relative transition-colors duration-300 ${
+      className={`mx-4 md:mx-32 my-8 md:rounded-3xl rounded-lg overflow-hidden md:h-[600px] relative transition-colors duration-300 ${
         darkMode
           ? "bg-gradient-to-r from-[#010d19] to-gray-600"
           : "bg-gradient-to-r from-[#e6ebef] to-gray-50"
@@ -46,7 +46,7 @@ function HeroSection() {
         </div>
 
         {/* Right Section for Image */}
-        <div className="w-full md:w-[58%] mt-6 md:mt-0">
+        <div className="w-full md:w-[54.4%] mt-6 md:mt-0">
           <img
             src={heroimg}
             alt="Consultants working together"
