@@ -8,8 +8,9 @@ function HeroSection() {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <section
-      className={`mx-4 md:mx-32 my-8 md:rounded-3xl rounded-lg overflow-hidden md:h-[568px] relative transition-colors duration-300 ${
+    <section className="w-full h-full md:pt-36 pt-28">
+    <div
+      className={`mx-4 md:mx-32 mb-8 md:rounded-3xl rounded-lg overflow-hidden md:h-[568px] relative transition-colors duration-300 ${
         darkMode
           ? "bg-gradient-to-r from-[#010d19] to-gray-600"
           : "bg-gradient-to-r from-[#e6ebef] to-gray-50"
@@ -45,7 +46,6 @@ function HeroSection() {
           </button>
         </div>
 
-        {/* Right Section for Image */}
         <div className="w-full md:w-[54.4%] mt-6 md:mt-0">
           <img
             src={heroimg}
@@ -54,13 +54,13 @@ function HeroSection() {
           />
         </div>
         
-        {/* Arrow Image hidden on small screens */}
         <img
           src={arrow1}
           alt="Decorative arrow 1"
           className="absolute left-[25%] bottom-[-8%] w-[160px] hidden lg:block"
         />
       </div>
+    </div>
     </section>
   );
 }

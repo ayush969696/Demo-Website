@@ -1,5 +1,5 @@
 // src/components/Header.jsx
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect, useRef } from 'react';
 import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
 import { Transition } from '@headlessui/react';
 import mainLogo from '../assets/mainLogo.png';
@@ -9,12 +9,37 @@ import { DarkModeContext } from '../contexts/DarkModeContext';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
+  
+  // State to handle navbar visibility
+  const [show, setShow] = useState(true);
+  const prevScrollY = useRef(0);
+
+  // Effect to handle scroll behavior
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > prevScrollY.current && currentScrollY > 50) {
+        // Scrolling down and scrolled more than 50px
+        setShow(false);
+      } else {
+        // Scrolling up
+        setShow(true);
+      }
+      
+      prevScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <header
-      className={`w-full z-50 px-4 lg:px-32 lg:pt-6 pb-4 py-3 ${
+      className={`fixed top-0 left-0 w-full z-50 px-4 lg:px-32 lg:pt-6 pb-4 py-3 transition-transform duration-300 ${
         darkMode ? 'bg-[#010d19]' : 'bg-white'
-      }`}
+      } ${show ? 'transform translate-y-0' : 'transform -translate-y-full'}`}
     >
       <div className="max-w-full mx-auto flex justify-between items-center h-16">
         {/* Logo */}
@@ -88,7 +113,7 @@ const Header = () => {
             className="text-2xl focus:outline-none"
             aria-label="Toggle menu"
           >
-            {isOpen ? '' : <FiMenu />}
+            {isOpen ? "" : <FiMenu />}
           </button>
         </div>
       </div>
@@ -102,7 +127,7 @@ const Header = () => {
         leave="transition ease-in duration-300 transform"
         leaveFrom="translate-x-0"
         leaveTo="-translate-x-full"
-        className={`md:hidden fixed inset-0 z-40  ${
+        className={`md:hidden fixed inset-0 z-40 ${
           darkMode ? 'bg-[#010d19]' : 'bg-white'
         }`}
       >

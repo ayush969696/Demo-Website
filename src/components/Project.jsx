@@ -97,13 +97,13 @@ function Project() {
         <div className="btn flex items-center gap-3">
           <div
             onClick={handlePrev}
-            className={`py-5 px-6 rounded-xl text-white cursor-pointer transition duration-300 ease-in-out ${darkMode ? "bg-gray-600 hover:bg-gray-500" : "bg-[#023363] hover:bg-[#022040]"}`}
+            className={`py-5 px-6 rounded-xl cursor-pointer transition duration-300 ease-in-out ${darkMode ? "bg-gray-100 hover:bg-gray-200 text-black" : "bg-[#023363] text-white hover:bg-[#022040]"}`}
           >
             <GoArrowLeft size={25} />
           </div>
           <div
             onClick={handleNext}
-            className={`py-5 px-6 rounded-xl text-white cursor-pointer transition duration-300 ease-in-out ${darkMode ? "bg-gray-600 hover:bg-gray-500" : "bg-[#023363] hover:bg-[#022040]"}`}
+            className={`py-5 px-6 rounded-xl  cursor-pointer transition duration-300 ease-in-out ${darkMode ? "bg-gray-100 hover:bg-gray-200 text-black" : "bg-[#023363] text-white hover:bg-[#022040]"}`}
           >
             <GoArrowRight size={25} />
           </div>
