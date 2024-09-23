@@ -8,7 +8,7 @@ const PricingComponent = ({ plan, price, features, popular, tag, isMiddle }) => 
   return (
     <div
       className={`w-full font-Inter ${
-        isMiddle ? "max-w-lg p-10" : "max-w-md p-8"
+        isMiddle ? "max-w-md p-10" : "max-w-sm p-8"
       } rounded-xl ${
         popular ? "bg-[#023363] text-white" : darkMode ? "bg-gray-800 text-white" : "bg-[#f6f6f7] "
       }`}
