@@ -9,7 +9,7 @@ function HeroSection() {
 
   return (
     <section
-      className={`mx-4 md:mx-32 my-8 md:rounded-3xl rounded-lg overflow-hidden md:h-[570px] relative transition-colors duration-300 ${
+      className={`mx-4 md:mx-32 my-8 md:rounded-3xl rounded-lg overflow-hidden md:h-[568px] relative transition-colors duration-300 ${
         darkMode
           ? "bg-gradient-to-r from-[#010d19] to-gray-600"
           : "bg-gradient-to-r from-[#e6ebef] to-gray-50"
