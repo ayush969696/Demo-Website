@@ -99,7 +99,7 @@ function Article({ darkMode }) {
                   </div>
 
                   <div className="py-4 text-start font-Inter">
-                    <h4 className="md:text-[34px] text-[20px] font-semibold text-[#101011] mb-2">
+                    <h4 className="md:text-[30px] text-[20px] font-semibold text-[#101011] mb-2">
                       {article.title}
                     </h4>
                     <p className="text-xl text-gray-600">
