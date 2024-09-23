@@ -87,7 +87,7 @@ function Article({ darkMode }) {
               {articles.map((article, index) => (
                 <div
                   key={index}
-                  className="snap-center flex-shrink-0 w-[350px] md:w-[450px]"
+                  className="snap-center flex-shrink-0 px-6 w-[350px] md:w-[450px]"
                 >
                   <div className="snap-center flex-shrink-0 w-[350px] md:w-[420px] relative">
                     <img
