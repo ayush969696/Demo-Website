@@ -89,7 +89,7 @@ function Article({ darkMode }) {
                   key={index}
                   className="snap-center flex-shrink-0 w-[350px] md:w-[450px]"
                 >
-                  <div className="snap-center flex-shrink-0 w-[350px] md:w-[430px] relative">
+                  <div className="snap-center flex-shrink-0 w-[350px] md:w-[40px] relative">
                     <img
                       src={article.img}
                       alt={article.title}
