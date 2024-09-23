@@ -9,7 +9,7 @@ function HeroSection() {
 
   return (
     <section
-      className={`mx-4 md:mx-32 my-8 md:rounded-3xl rounded-lg overflow-hidden md:h-[580px] relative transition-colors duration-300 ${
+      className={`mx-4 md:mx-32 my-8 md:rounded-3xl rounded-lg overflow-hidden md:h-[570px] relative transition-colors duration-300 ${
         darkMode
           ? "bg-gradient-to-r from-[#010d19] to-gray-600"
           : "bg-gradient-to-r from-[#e6ebef] to-gray-50"
@@ -27,7 +27,7 @@ function HeroSection() {
             with Innovative Solutions
           </h1>
           <p
-            className={`mt-4 text-[16px] md:text-[26px] font-Inter transition-colors duration-300 ${
+            className={`mt-4 text-[16px] md:text-[22px] font-Inter transition-colors duration-300 ${
               darkMode ? "text-gray-300" : "text-[#404144]"
             }`}
           >
@@ -35,7 +35,7 @@ function HeroSection() {
             of industry trends, best practices, and the latest technologies.
           </p>
           <button
-            className={`px-6 md:px-8 mt-8 py-[12px] md:py-[18px] text-md md:text-xl font-semibold rounded-xl transition duration-500 ${
+            className={`px-6 md:px-8 mt-8 py-[10px] md:py-[16px] text-md md:text-xl font-semibold rounded-xl transition duration-500 ${
               darkMode
                 ? "bg-gray-50 text-black hover:bg-gray-200"
                 : "text-white bg-[#023363] hover:bg-[#022040]"
