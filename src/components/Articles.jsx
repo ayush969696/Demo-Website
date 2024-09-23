@@ -82,18 +82,18 @@ function Article({ darkMode }) {
           <div className="relative flex items-center">
             <div
               ref={scrollRef}
-              className="flex lg:flex-row flex-col mx-auto md:mx-0 lg:space-x-[16px] overflow-hidden scrollbar-hide snap-x lg:pl-4 gap-2"
+              className="flex lg:flex-row flex-col mx-auto md:mx-0 lg:space-x-[6px] overflow-hidden scrollbar-hide snap-x lg:pl-4 gap-2"
             >
               {articles.map((article, index) => (
                 <div
                   key={index}
                   className="snap-center flex-shrink-0 w-[350px] md:w-[450px]"
                 >
-                  <div className="snap-center flex-shrink-0 w-[350px] md:w-[420px] relative">
+                  <div className="snap-center flex-shrink-0 w-[350px] md:w-[430px] relative">
                     <img
                       src={article.img}
                       alt={article.title}
-                      className="md:w-[420px] w-[350px] h-[305px] md:h-[360px] object-cover rounded-xl"
+                      className="md:w-[430px] w-[350px] h-[305px] md:h-[360px] object-cover rounded-xl"
                     />
                     {/* <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 rounded-xl"></div> */}
                   </div>
