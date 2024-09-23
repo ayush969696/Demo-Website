@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import '../App.css'; 
 import { IoIosAdd } from "react-icons/io";
 import { FiMinus } from "react-icons/fi";
+import { DarkModeContext } from '../contexts/DarkModeContext'; // Import the context
 
 const faqs = [
   {
@@ -38,7 +39,7 @@ const faqs = [
   },
 ];
 
-const FAQItem = ({ question, answer, isOpen, onClick, id }) => {
+const FAQItem = ({ question, answer, isOpen, onClick, id, darkMode }) => {
   const contentRef = useRef(null);
   const [height, setHeight] = useState("0px");
 
@@ -50,32 +51,34 @@ const FAQItem = ({ question, answer, isOpen, onClick, id }) => {
 
   return (
     <div
-      className={`accordion bg-[#f6f6f7] px-5 py-7 rounded-xl transition duration-500  mb-4 md:mb-8`}
+      className={`accordion ${darkMode ? 'bg-gray-800' : 'bg-[#f6f6f7]'} px-5 py-7 rounded-xl transition duration-500 mb-4 md:mb-8`}
       id={`basic-heading-${id}`}
     >
       <button
         onClick={onClick}
-        className="accordion-toggle inline-flex items-center justify-between  text-left text-lg font-normal leading-8 text-gray-900 w-full transition duration-500  focus:outline-none"
+        className={`accordion-toggle inline-flex items-center justify-between text-left text-lg font-normal leading-8 w-full transition duration-500 focus:outline-none ${darkMode ? 'text-white' : 'text-gray-900'}`}
         aria-controls={`basic-collapse-${id}`}
         aria-expanded={isOpen}
       >
-        <h5 className="font-semibold md:text-[22px] text-md text-black hover:text-[#3f3f41]">{question}</h5>
+        <h5 className={`font-semibold md:text-[22px] text-md ${darkMode ? 'text-white' : 'text-black'} hover:text-[#3f3f41]`}>
+          {question}
+        </h5>
         <div className="flex items-center">
           {/* Minus Icon */}
           <FiMinus
             size={38}
-            className={`text-black bg-[#dfdfe0] p-1 rounded-full transition duration-500 ${isOpen ? "" : "hidden"} `}
+            className={`text-black bg-[#dfdfe0] p-1 rounded-full transition duration-500 ${isOpen ? "" : "hidden"}`}
           />
           {/* Plus Icon */}
           <IoIosAdd
             size={40}
-            className={`text-black bg-[#dfdfe0] p-1 rounded-full transition duration-500 ${isOpen ? "hidden" : "block"} `}
+            className={`text-black bg-[#dfdfe0] p-1 rounded-full transition duration-500 ${isOpen ? "hidden" : "block"}`}
           />
         </div>
       </button>
       <div
         ref={contentRef}
-        className="accordion-content overflow-hidden pr-4 mt-2 text-lg text-gray-900 font-Inter leading-6 transition-all duration-500"
+        className={`accordion-content overflow-hidden pr-4 mt-2 text-lg ${darkMode ? 'text-gray-300' : 'text-gray-900'} font-Inter leading-6 transition-all duration-500`}
         style={{ maxHeight: height, opacity: isOpen ? 1 : 0 }}
         id={`basic-collapse-${id}`}
         role="region"
@@ -89,6 +92,7 @@ const FAQItem = ({ question, answer, isOpen, onClick, id }) => {
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const { darkMode } = useContext(DarkModeContext); // Use context for dark mode
 
   const toggleFAQ = (index) => {
     if (openIndex === index) {
@@ -99,19 +103,16 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="py-8 px-2 md:px-10 lg:px-24">
+    <section className={`py-8 px-2 md:px-10 lg:px-24 ${darkMode ? ' text-white' : 'bg-white text-black'}`}>
       <div className="mx-auto">
-      <div className="mb-12 text-center md:text-start">
-        <span className="text-xl text-center mx-auto md:mx-0 w-40 bg-[#f6f6f7] mb-5 p-3 rounded-lg block text-[#101011]">
-          Help Center
-        </span>
-        <h3
-          className="text-3xl sm:text-3xl xl:text-[52px]  font-bold m-0] px-4 md:px-0"
-          style={{ lineHeight: "1.2" }}
-        >
-        Frequently Asked Questions
-        </h3>
-      </div>
+        <div className="mb-12 text-center md:text-start">
+          <span className={`text-xl text-center mx-auto md:mx-0 w-40 mb-5 p-3 rounded-lg block ${darkMode ? 'bg-gray-900 text-white' : 'bg-[#f6f6f7] text-[#101011]'}`}>
+            Help Center
+          </span>
+          <h3 className="text-3xl sm:text-3xl xl:text-[52px] font-bold m-0 px-4 md:px-0" style={{ lineHeight: "1.2" }}>
+            Frequently Asked Questions
+          </h3>
+        </div>
 
         {/* Two-column layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
@@ -123,6 +124,7 @@ const FAQSection = () => {
               answer={faq.answer}
               isOpen={openIndex === index}
               onClick={() => toggleFAQ(index)}
+              darkMode={darkMode} // Pass dark mode state
             />
           ))}
         </div>

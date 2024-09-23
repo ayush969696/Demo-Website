@@ -1,6 +1,7 @@
-import React, { useRef, useState } from "react";
-import { GoArrowRight } from "react-icons/go";
-import { GoArrowLeft } from "react-icons/go";
+// src/components/Project.jsx
+import React, { useRef, useState, useContext } from "react";
+import { GoArrowRight, GoArrowLeft } from "react-icons/go";
+import { DarkModeContext } from "../contexts/DarkModeContext";
 import "tailwindcss/tailwind.css";
 
 const allProjects = [
@@ -42,7 +43,8 @@ const allProjects = [
   },
 ];
 
-function Project({darkMode}) {
+function Project() {
+  const { darkMode } = useContext(DarkModeContext);
   const scrollRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -81,11 +83,11 @@ function Project({darkMode}) {
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0 md:items-end w-full lg:px-24">
         
         <div className="flex flex-col items-center md:items-start">
-          <span className="text-xl text-center w-40 bg-[#f6f6f7] mb-5 p-3 rounded-lg block text-[#101011]">
+          <span className={`text-xl text-center w-40 mb-5 p-3 rounded-lg block ${darkMode ? "bg-gray-900 text-white" : "bg-[#f6f6f7] text-[#101011]"}`}>
             Projects
           </span>
           <h3
-            className="text-3xl sm:text-3xl xl:text-[52px] font-bold m-0 px-4 md:px-0"
+            className={`text-3xl sm:text-3xl xl:text-[52px] font-bold m-0 px-4 md:px-0 ${darkMode ? "text-white" : "text-black"}`}
             style={{ lineHeight: "1.2" }}
           >
             We specialize in the <br className="hidden sm:block" /> following
@@ -95,13 +97,13 @@ function Project({darkMode}) {
         <div className="btn flex items-center gap-3">
           <div
             onClick={handlePrev}
-            className="py-5 px-6 bg-[#023363] rounded-xl text-white cursor-pointer transition duration-300 ease-in-out"
+            className={`py-5 px-6 rounded-xl text-white cursor-pointer transition duration-300 ease-in-out ${darkMode ? "bg-gray-600 hover:bg-gray-500" : "bg-[#023363] hover:bg-[#022040]"}`}
           >
             <GoArrowLeft size={25} />
           </div>
           <div
             onClick={handleNext}
-            className="py-5 px-6 bg-[#023363] rounded-xl text-white cursor-pointer transition duration-300 ease-in-out"
+            className={`py-5 px-6 rounded-xl text-white cursor-pointer transition duration-300 ease-in-out ${darkMode ? "bg-gray-600 hover:bg-gray-500" : "bg-[#023363] hover:bg-[#022040]"}`}
           >
             <GoArrowRight size={25} />
           </div>
@@ -114,14 +116,14 @@ function Project({darkMode}) {
           <div className="relative flex items-center">
             <div
               ref={scrollRef}
-              className="flex space-x-[20px] overflow-hidden  scrollbar-hide snap-x pl-2 gap-2"
+              className="flex space-x-[20px] overflow-hidden scrollbar-hide snap-x pl-2 gap-2"
             >
               {allProjects.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="snap-center flex-shrink-0 w-[300px] md:w-[450px] "
+                  className="snap-center flex-shrink-0 w-[300px] md:w-[450px]"
                 >
-                  <div className="snap-center flex-shrink-0 w-[300px] md:w-[450px] relative">
+                  <div className="relative">
                     <img
                       src={testimonial.img}
                       alt={testimonial.name}
@@ -131,14 +133,14 @@ function Project({darkMode}) {
                   </div>
 
                   <div className="py-4 text-start">
-                    <h4 className="md:text-[35px] text-[25px] font-semibold text-[#101011] mb-2">
+                    <h4 className={`md:text-[35px] text-[25px] font-semibold ${darkMode ? "text-white" : "text-[#101011]"}`}>
                       {testimonial.name}
                     </h4>
                     <div className="flex justify-start items-center space-x-2">
-                      <span className="md:text-lg text-md px-4 py-2 rounded-xl font-Inter bg-[#EEEEEE] text-gray-600">
+                      <span className={`md:text-lg text-md px-4 py-2 rounded-xl font-Inter ${darkMode ? "bg-gray-700 text-white" : "bg-[#EEEEEE] text-gray-600"}`}>
                         {testimonial.text1}
                       </span>
-                      <span className="md:text-lg text-md px-4 py-2 rounded-xl font-Inter bg-[#EEEEEE] text-gray-600">
+                      <span className={`md:text-lg text-md px-4 py-2 rounded-xl font-Inter ${darkMode ? "bg-gray-700 text-white" : "bg-[#EEEEEE] text-gray-600"}`}>
                         {testimonial.text2}
                       </span>
                     </div>
@@ -147,22 +149,18 @@ function Project({darkMode}) {
               ))}
             </div>
           </div>
-          
         </div>
-
-        
       </section>
       <button
-          className={`flex items-center gap-3 px-6 mx-auto md:px-8 mt-4 md:mt-20 py-[12px] md:py-[14px] text-md md:text-2xl  font-semibold rounded-xl font-Inter ${
+          className={`flex items-center gap-3 px-6 mx-auto md:px-8 mt-4 md:mt-20 py-[12px] md:py-[14px] text-md md:text-2xl font-semibold rounded-xl font-Inter ${
             darkMode ? "bg-gray-50 text-black" : "text-white bg-[#023363]"
           } hover:${
-            darkMode ? "bg-gray-200" : "bg-[#022040]"
+            darkMode ? "bg-gray-200 " : "bg-[#022040]"
           } transition duration-500`}
         >
           See more projects 
-          <i class="uil uil-arrow-up-right text-3xl text-white "></i>
+          <i className={`uil uil-arrow-up-right text-3xl ${darkMode ? "text-black" : "text-white"}`}></i>
         </button>
-
     </div>
   );
 }

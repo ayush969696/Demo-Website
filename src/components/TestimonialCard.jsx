@@ -1,9 +1,11 @@
-import React, { useRef, useState, useEffect } from "react";
+// src/components/Testimonials.jsx
+import React, { useRef, useState, useEffect, useContext } from "react";
 import { RiNetflixFill } from "react-icons/ri";
 import { FaShopify, FaSpotify } from "react-icons/fa";
 import { SiHuawei } from "react-icons/si";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
-import '../App.css'
+import { DarkModeContext } from "../contexts/DarkModeContext"; // Import the context
+import '../App.css';
 
 const testimonials = [
   {
@@ -58,10 +60,16 @@ const testimonials = [
   },
 ];
 
-const TestimonialCard = ({ testimonial }) => (
-  <div className="bg-gray-100 p-6 md:my-20 rounded-lg w-full sm:w-80 md:w-96 flex-shrink-0 font-Inter snap-start cursor-pointer">
+const TestimonialCard = ({ testimonial, darkMode }) => (
+  <div
+    className={`p-6 md:my-20 rounded-lg w-full sm:w-80 md:w-96 flex-shrink-0 font-Inter snap-start cursor-pointer ${
+      darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
+    }`}
+  >
     <div className="text-[4rem] text-[#023363] mb-2 leading-none">“</div>
-    <p className="text-gray-600 text-xl mb-4">{testimonial.feedback}</p>
+    <p className={`text-xl mb-4 ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
+      {testimonial.feedback}
+    </p>
     <div className="flex items-center mb-6">
       <img
         src={testimonial.image}
@@ -77,7 +85,7 @@ const TestimonialCard = ({ testimonial }) => (
     <div className="w-full h-[1.2px] bg-gray-300"></div>
 
     <div className="flex justify-between items-center mt-6">
-      <div className="text-4xl text-[#505155]">{testimonial.companyLogo}</div>
+      <div className={`text-4xl ${darkMode ? "text-white" :  "text-[#505155]" }`}>{testimonial.companyLogo}</div>
       <div className="flex">
         {Array.from({ length: testimonial.rating }, (_, i) => (
           <svg
@@ -97,6 +105,7 @@ const TestimonialCard = ({ testimonial }) => (
 const Testimonials = () => {
   const scrollRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { darkMode } = useContext(DarkModeContext); // Use context for dark mode
 
   const handlePrev = () => {
     if (scrollRef.current) {
@@ -137,14 +146,14 @@ const Testimonials = () => {
   }, [currentIndex]);
 
   return (
-    <div className="md:pt-20 md:pb-5 py-8 px-2 bg-white">
+    <div className={`md:pt-20 md:pb-5 py-8 px-2 ${darkMode ? " text-white" : "bg-white text-black"}`}>
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0 md:items-end w-full lg:px-24">
         <div className="flex flex-col items-center md:items-start">
-          <span className="text-xl text-center w-40 bg-[#f6f6f7] mb-5 p-3 rounded-lg block text-[#101011]">
-            Projects
+          <span className={`text-xl text-center w-40 ${darkMode ? "bg-gray-900 text-white" : "bg-[#f6f6f7] text-[#101011]"} mb-5 p-3 rounded-lg block`}>
+            Clients
           </span>
           <h3
-            className="text-3xl sm:text-3xl xl:text-[52px] font-bold m-0 px-4 md:px-0 text-center md:text-left"
+            className={`text-3xl sm:text-3xl xl:text-[52px] font-bold m-0 px-4 md:px-0 text-center md:text-left ${darkMode ? "text-white" : "text-black"}`}
             style={{ lineHeight: "1.2" }}
           >
             We specialize in the <br className="hidden sm:block" /> following case
@@ -154,14 +163,14 @@ const Testimonials = () => {
         <div className="btn flex items-center gap-3">
           <button
             onClick={handlePrev}
-            className="py-4 px-5 bg-[#023363] rounded-xl text-white cursor-pointer transition duration-300 ease-in-out hover:bg-[#022a4d]"
+            className={`py-4 px-5 ${darkMode ? "bg-white text-black hover:bg-gray-200" :"  bg-[#023363] text-white hover:bg-[#022a4d]"} rounded-xl  cursor-pointer transition duration-300 ease-in-out `}
             aria-label="Previous Testimonial"
           >
             <GoArrowLeft size={30} />
           </button>
           <button
             onClick={handleNext}
-            className="py-4 px-5 bg-[#023363] rounded-xl text-white cursor-pointer transition duration-300 ease-in-out hover:bg-[#022a4d]"
+            className={`py-4 px-5  ${darkMode ? "bg-white text-black hover:bg-gray-200" :"  bg-[#023363] text-white hover:bg-[#022a4d]"} rounded-xl  cursor-pointer transition duration-300 ease-in-out `}
             aria-label="Next Testimonial"
           >
             <GoArrowRight size={30} />
@@ -175,7 +184,7 @@ const Testimonials = () => {
           ref={scrollRef}
         >
           {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} testimonial={testimonial} />
+            <TestimonialCard key={index} testimonial={testimonial} darkMode={darkMode} />
           ))}
         </div>
       </div>

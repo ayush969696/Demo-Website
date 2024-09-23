@@ -1,18 +1,22 @@
-import React from "react";
+// src/components/PricingCard.jsx
+import React, { useContext } from "react";
+import { DarkModeContext } from "../contexts/DarkModeContext";
 
 const PricingComponent = ({ plan, price, features, popular, tag, isMiddle }) => {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
     <div
       className={`w-full font-Inter ${
-        isMiddle ? "max-w-md  p-10" : "max-w-sm  p-8"
+        isMiddle ? "max-w-lg p-10" : "max-w-md p-8"
       } rounded-xl ${
-        popular ? "bg-[#023363] text-white" : "bg-[#f6f6f7]"
+        popular ? "bg-[#023363] text-white" : darkMode ? "bg-gray-800 text-white" : "bg-[#f6f6f7] "
       }`}
     >
       <div className="flex justify-between items-center">
         <span
           className={`${
-            popular ? "bg-yellow-400 text-[#023363]" : "bg-gray-200"
+            popular ? "bg-yellow-400 text-[#023363]" : "bg-gray-200 text-black"
           } text-lg px-4 py-1 rounded-lg`}
         >
           {tag}
@@ -22,14 +26,14 @@ const PricingComponent = ({ plan, price, features, popular, tag, isMiddle }) => 
         )}
       </div>
       <div className="mt-4 pb-6">
-        <h2 className="text-[70px] font-bold">
+        <h2 className={`text-[70px] font-bold ${ popular ? "text-white" : darkMode ? "text-white" : "text-black"}`}>
           {price}
           <span className="text-3xl font-semibold"> / mo</span>
         </h2>
-        <p className="mt-2 text-md">{plan}</p>
+        <p className={`mt-2 text-md  ${ popular ? "text-white" : darkMode ? "text-gray-300" : "text-black"}`}>{plan}</p>
       </div>
       <hr />
-      <ul className="mt-5 space-y-3 text-lg">
+      <ul className={`mt-5 space-y-3 text-lg  ${ popular ? "text-white" : darkMode  ? "text-gray-300" : "text-black"}`}>
         {features.map((feature, index) => (
           <li key={index} className="flex items-center gap-3">
             <span className="bg-gray-200 rounded-full flex items-center justify-center p-2">
@@ -48,7 +52,7 @@ const PricingComponent = ({ plan, price, features, popular, tag, isMiddle }) => 
       >
         Try for Free
       </button>
-      <p className="text-md font-semibold mt-4 text-center text-[#738ea9]">
+      <p className={`text-md font-semibold mt-4 text-center ${darkMode ? "text-gray-400" : "text-[#738ea9]"}`}>
         {plan === "Free"
           ? "Free forever and can be upgraded."
           : "Value for money and can be upgraded."}
@@ -100,13 +104,15 @@ const PricingCard = () => {
     },
   ];
 
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
-    <div className="py-12 w-full">
-      <span className="text-xl text-center w-40 mx-auto bg-[#f6f6f7] mb-5 p-3 rounded-lg block text-[#101011]">
+    <div className="md:py-20 py-12 w-full">
+      <span className={`text-xl text-center w-40 mx-auto ${darkMode ? "bg-gray-900 text-white" : "bg-[#f6f6f7] mb-5"} p-3 rounded-lg block`}>
         Pricing
       </span>
       <h3
-        className="text-3xl text-center sm:text-3xl xl:text-[55px] pb-14 font-bold px-4 md:px-0"
+        className={`text-3xl text-center sm:text-3xl xl:text-[55px] pb-14 pt-6 font-bold px-4 md:px-0 ${darkMode ? "text-white" : "text-black"}`}
         style={{ lineHeight: "1.2" }}
       >
         We’ve offered the <br className="hidden sm:block" />
