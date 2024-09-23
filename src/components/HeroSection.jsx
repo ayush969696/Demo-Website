@@ -9,7 +9,7 @@ function HeroSection() {
 
   return (
     <section
-      className={`mx-4 md:mx-32 my-8 md:rounded-3xl rounded-lg overflow-hidden md:h-[600px] relative transition-colors duration-300 ${
+      className={`mx-4 md:mx-32 my-8 md:rounded-3xl rounded-lg overflow-hidden md:h-[580px] relative transition-colors duration-300 ${
         darkMode
           ? "bg-gradient-to-r from-[#010d19] to-gray-600"
           : "bg-gradient-to-r from-[#e6ebef] to-gray-50"
@@ -19,7 +19,7 @@ function HeroSection() {
         {/* Left Section for Text */}
         <div className="w-full md:w-1/2 px-6 md:px-12 pt-12 md:pt-20 text-center md:text-left">
           <h1
-            className={`text-[32px] md:text-[60px] font-bold leading-tight transition-colors duration-300 ${
+            className={`text-[32px] md:text-[55px] font-bold leading-tight transition-colors duration-300 ${
               darkMode ? "text-white" : "text-gray-900"
             }`}
           >
