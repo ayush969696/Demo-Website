@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { FiMail } from 'react-icons/fi';
-import { DarkModeContext } from '../contexts/DarkModeContext'; // Import the context
+import { DarkModeContext } from '../contexts/DarkModeContext';
 
 const SubscribeSection = () => {
-  const { darkMode } = useContext(DarkModeContext); // Use context for dark mode
+  const { darkMode } = useContext(DarkModeContext); 
 
   return (
     <div className={`container max-w-full mx-auto px-4 sm:px-4 lg:px-24 py-10 `}>

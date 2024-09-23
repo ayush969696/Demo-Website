@@ -1,4 +1,3 @@
-// src/contexts/DarkModeContext.jsx
 import React, { createContext, useState, useEffect } from 'react';
 
 // Create Context
@@ -6,7 +5,7 @@ export const DarkModeContext = createContext();
 
 // Create Provider
 export const DarkModeProvider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   // Persist dark mode preference in localStorage
   useEffect(() => {
@@ -17,11 +16,7 @@ export const DarkModeProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.toggle('dark', darkMode);
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
   }, [darkMode]);
 

@@ -9,3 +9,20 @@
     background-color: #39f;
     color: white;
 }
+
+html, body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+header {
+  transition: background-color 0.4s ease;
+}
+
+a {
+  transition: color 0.4s ease;
+}
+
+button {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+

@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
-import { DarkModeContext } from '../contexts/DarkModeContext'; // Import the context
+import { DarkModeContext } from '../contexts/DarkModeContext'; 
 
 const CTA = () => {
-  const { darkMode } = useContext(DarkModeContext); // Use context for dark mode
+  const { darkMode } = useContext(DarkModeContext); 
 
   return (
-    <div className='lg:px-24 md:py-14 px-2 py-6'>
+    <div className='lg:px-24 md:py-14 px-2 py-6 bg-transparent'>
       <div id="cta" className={`w-full h-[435px] relative flex items-center justify-center overflow-hidden rounded-2xl ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
-        {/* Background Image with Blue Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -16,7 +15,6 @@ const CTA = () => {
         ></div>
         <div className={`absolute inset-0 ${darkMode ? 'bg-gray-900' : 'bg-[#0f3761]'} opacity-85`}></div>
 
-        {/* Content Area */}
         <div className="relative z-10 text-center flex flex-col items-center gap-3 px-4">
           <h2 className={`text-3xl lg:text-[54px] font-semibold max-w-3xl text-white ${darkMode ? 'text-gray-100' : 'text-white'}`} style={{ lineHeight: 1.1 }}>
             Start scaling your business with Innovar
@@ -32,7 +30,6 @@ const CTA = () => {
           </a>
         </div>
 
-        {/* Decorative Stars */}
         <img
           src="https://unistudio.co/html/innovar/assets/images/common/gold-stare.svg"
           alt="star-icon"

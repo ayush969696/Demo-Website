@@ -103,7 +103,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className={`py-8 px-2 md:px-10 lg:px-24 ${darkMode ? ' text-white' : 'bg-white text-black'}`}>
+    <section className={`py-8 px-2 md:px-10 lg:px-24 ${darkMode ? ' text-white' : 'bg-transparent text-black'}`}>
       <div className="mx-auto">
         <div className="mb-12 text-center md:text-start">
           <span className={`text-xl text-center mx-auto md:mx-0 w-40 mb-5 p-3 rounded-lg block ${darkMode ? 'bg-gray-900 text-white' : 'bg-[#f6f6f7] text-[#101011]'}`}>
