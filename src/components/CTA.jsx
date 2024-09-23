@@ -34,7 +34,7 @@ const CTA = () => {
       <img
         src="https://unistudio.co/html/innovar/assets/images/common/gold-stare.svg"
         alt="star-icon"
-        className="absolute top-1/4 left-[12%] w-8 xl:w-16"
+        className="absolute md:top-1/4 top-[12%] left-[12%] w-8 xl:w-16"
       />
       <img
         src="https://unistudio.co/html/innovar/assets/images/common/gold-stare.svg"
