@@ -46,7 +46,7 @@ function HeroSection() {
         </div>
 
         {/* Right Section for Image */}
-        <div className="w-full md:w-[55.4%] mt-6 md:mt-0">
+        <div className="w-full md:w-[58%] mt-6 md:mt-0">
           <img
             src={heroimg}
             alt="Consultants working together"
