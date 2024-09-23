@@ -87,7 +87,7 @@ function Article({ darkMode }) {
               {articles.map((article, index) => (
                 <div
                   key={index}
-                  className="snap-center flex-shrink-0 px-6 w-[350px] md:w-[450px]"
+                  className="snap-center flex-shrink-0  w-[350px] md:w-[450px]"
                 >
                   <div className="snap-center flex-shrink-0 w-[350px] md:w-[420px] relative">
                     <img
@@ -98,8 +98,8 @@ function Article({ darkMode }) {
                     {/* <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 rounded-xl"></div> */}
                   </div>
 
-                  <div className="py-4 text-start font-Inter">
-                    <h4 className="md:text-[30px] text-[20px] font-semibold text-[#101011] mb-2">
+                  <div className="py-4 text-start font-Inter pr-8">
+                    <h4 className="md:text-[30px] text-[20px] font-semibold  pr-8 text-[#101011] mb-2">
                       {article.title}
                     </h4>
                     <p className="text-xl text-gray-600">
