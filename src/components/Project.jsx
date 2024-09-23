@@ -114,7 +114,7 @@ function Project({darkMode}) {
           <div className="relative flex items-center">
             <div
               ref={scrollRef}
-              className="flex space-x-[20px] overflow-hidden scrollbar-hide snap-x pl-2 gap-2"
+              className="flex space-x-[20px] overflow-hidden  scrollbar-hide snap-x pl-2 gap-2"
             >
               {allProjects.map((testimonial, index) => (
                 <div

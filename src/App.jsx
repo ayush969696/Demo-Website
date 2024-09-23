@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import AboutUs from "./components/AboutUs";
 import Articles from "./components/Articles";
 import BrandPanel from "./components/BrandPanel";
+import CTA from "./components/CTA";
+import FAQSection from "./components/FAQSection";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import PricingCard from "./components/PricingCard";
@@ -33,6 +36,9 @@ function App() {
       <Testimonials />
       <SubscribeSection />
       <Articles />
+      <FAQSection />
+      <CTA />
+      <Footer />
     </div>
   );
 }

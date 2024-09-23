@@ -59,7 +59,7 @@ const testimonials = [
 ];
 
 const TestimonialCard = ({ testimonial }) => (
-  <div className="bg-gray-100 p-6 md:my-20 rounded-lg w-full sm:w-80 md:w-96 flex-shrink-0 font-Inter snap-start">
+  <div className="bg-gray-100 p-6 md:my-20 rounded-lg w-full sm:w-80 md:w-96 flex-shrink-0 font-Inter snap-start cursor-pointer">
     <div className="text-[4rem] text-[#023363] mb-2 leading-none">“</div>
     <p className="text-gray-600 text-xl mb-4">{testimonial.feedback}</p>
     <div className="flex items-center mb-6">
