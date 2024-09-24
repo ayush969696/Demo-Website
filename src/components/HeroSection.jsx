@@ -7,7 +7,9 @@ function HeroSection() {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <section className={`lg:py-24 pt-20 pb-12 `}>
+    <section className={`lg:py-24 pt-20 pb-12 ${
+      darkMode ? 'bg-[#010d19]' : 'bg-white'
+    } `}>
       <div
         className={`mx-4 lg:mx-32 my-8 lg:rounded-3xl rounded-lg overflow-hidden lg:h-[650px] relative transition-colors duration-300 ${
           darkMode

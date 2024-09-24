@@ -106,7 +106,7 @@ const PricingCard = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className={`md:py-20 py-12 w-full bg-transparent ${darkMode ? 'bg-[#010d19]' : 'bg-white'}`}>
+    <div className={`md:py-20 py-12 w-full bg-transparent${darkMode ? 'bg-[#010d19] text-white' : 'bg-white text-black'}`}>
       <span className={`text-xl text-center w-40 mx-auto ${darkMode ? "bg-gray-900 text-white" : "bg-[#f6f6f7] mb-5"} p-3 rounded-lg block`}>
         Pricing
       </span>

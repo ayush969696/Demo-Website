@@ -52,7 +52,7 @@ const Header = () => {
         darkMode ? 'bg-[#010d19]' : 'bg-white'
       } ${show ? 'transform translate-y-0' : 'transform -translate-y-full'}`}
     >
-      <div className="max-w-full mx-auto flex justify-between items-center h-16">
+      <div className={`max-w-full mx-auto flex justify-between items-center h-16`}>
         <img
           src={darkMode ? mainLogo : mainLogoLight}
           alt="Logo"
