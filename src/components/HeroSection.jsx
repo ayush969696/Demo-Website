@@ -44,7 +44,7 @@ function HeroSection() {
             </button>
           </div>
 
-          <div className="w-full lg:w-[56.4%] mt-6 lg:mt-16">
+          <div className="w-full lg:w-[56.4%] mt-6 lg:mt-20">
             <img
               src={heroimg}
               alt="Consultants working together"
