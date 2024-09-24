@@ -12,14 +12,12 @@ const Header = () => {
   const [show, setShow] = useState(true);
   const prevScrollY = useRef(0);
 
-  // Reference to detect outside clicks
   const menuRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Close the navbar if scrolling occurs on mobile screens only
       if (isOpen && window.innerWidth < 1024) {
         setIsOpen(false);
       }
@@ -33,7 +31,6 @@ const Header = () => {
       prevScrollY.current = currentScrollY;
     };
 
-    // Handle outside click to close the mobile menu
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsOpen(false);
@@ -151,7 +148,7 @@ const Header = () => {
         className={`lg:hidden fixed inset-0 z-40 ${
           darkMode ? 'bg-[#010d19]' : 'bg-white'
         }`}
-        ref={menuRef} // Add reference to detect outside clicks
+        ref={menuRef} 
       >
         <div
           className={`flex flex-col items-start p-6 space-y-6 w-3/4 h-full shadow-xl ${
