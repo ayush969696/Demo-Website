@@ -12,27 +12,46 @@ const Header = () => {
   const [show, setShow] = useState(true);
   const prevScrollY = useRef(0);
 
+  // Reference to detect outside clicks
+  const menuRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
+      // Close the navbar if scrolling occurs on mobile screens only
+      if (isOpen && window.innerWidth < 1024) {
+        setIsOpen(false);
+      }
+
       if (currentScrollY > prevScrollY.current && currentScrollY > 50) {
         setShow(false);
       } else {
         setShow(true);
       }
-      
+
       prevScrollY.current = currentScrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Handle outside click to close the mobile menu
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll);
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50  px-4 lg:px-32 lg:pt-6 pb-4 py-3 transition-transform duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 px-4 lg:px-32 lg:pt-6 pb-4 py-3 transition-transform duration-300 ${
         darkMode ? 'bg-[#010d19]' : 'bg-white'
       } ${show ? 'transform translate-y-0' : 'transform -translate-y-full'}`}
     >
@@ -98,7 +117,7 @@ const Header = () => {
               aria-label="Toggle dark mode"
             >
               <div
-                className={`w-8 h-8 flex items-center justify-center rounded-full  transform transition-transform duration-500 ${
+                className={`w-8 h-8 flex items-center justify-center rounded-full transform transition-transform duration-500 ${
                   darkMode
                     ? 'bg-gray-800 translate-x-8'
                     : 'bg-[#023363] translate-x-0'
@@ -132,6 +151,7 @@ const Header = () => {
         className={`lg:hidden fixed inset-0 z-40 ${
           darkMode ? 'bg-[#010d19]' : 'bg-white'
         }`}
+        ref={menuRef} // Add reference to detect outside clicks
       >
         <div
           className={`flex flex-col items-start p-6 space-y-6 w-3/4 h-full shadow-xl ${
