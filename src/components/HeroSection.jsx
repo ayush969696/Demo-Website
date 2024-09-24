@@ -44,8 +44,7 @@ function HeroSection() {
             </button>
           </div>
 
-          {/* Right Section for Image */}
-          <div className="w-full lg:w-[56.4%] mt-6 lg:mt-10">
+          <div className="w-full lg:w-[56.4%] mt-6 lg:mt-16">
             <img
               src={heroimg}
               alt="Consultants working together"
@@ -53,7 +52,6 @@ function HeroSection() {
             />
           </div>
 
-          {/* Arrow Image hidden on small screens */}
           <img
             src={arrow1}
             alt="Decorative arrow 1"
