@@ -18,7 +18,7 @@ function HeroSection() {
         <div className="container mx-auto flex flex-col justify-between lg:flex-row items-center relative h-full">
           <div className="w-full lg:w-1/2 px-6 lg:px-12 pt-12 lg:pt-20 text-center lg:text-left">
             <h1
-              className={`text-[32px] lg:text-[60px] font-bold leading-tight transition-colors duration-300 ${
+              className={`text-[32px] md:text-[46px] lg:text-[58px] font-bold leading-tight transition-colors duration-300 ${
                 darkMode ? "text-white" : "text-gray-900"
               }`}
             >
@@ -45,7 +45,7 @@ function HeroSection() {
           </div>
 
           {/* Right Section for Image */}
-          <div className="w-full lg:w-[56.4%] mt-6 lg:mt-0">
+          <div className="w-full lg:w-[56.4%] mt-6 lg:mt-10">
             <img
               src={heroimg}
               alt="Consultants working together"
