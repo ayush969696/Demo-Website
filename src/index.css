@@ -32,7 +32,8 @@ button {
 }
 
 body {
-  scrollbar-color: #ccc #d4d2d2; 
+  scrollbar-color: #ccc #d4d2d2;
+  transition: background-color .1s ease, color .1s ease;
 }
 
 body.dark-mode {

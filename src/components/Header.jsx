@@ -108,7 +108,7 @@ const Header = () => {
           <div className="relative flex items-center">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className={`w-20 h-10 flex items-center rounded-full p-1 ${
+              className={`w-20 h-10 flex items-center rounded-full p-2 ${
                 darkMode ? 'bg-yellow-500' : 'bg-yellow-400'
               }`}
               aria-label="Toggle dark mode"
@@ -120,7 +120,7 @@ const Header = () => {
                     : 'bg-[#023363] translate-x-0'
                 }`}
               >
-                {darkMode ? <FiMoon className="text-white" /> : <FiSun className="text-white" />}
+                {darkMode ? <FiMoon className="text-white" size={18}/> : <FiSun className="text-white" size={18}/>}
               </div>
             </button>
           </div>
