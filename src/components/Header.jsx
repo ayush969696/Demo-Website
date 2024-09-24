@@ -89,13 +89,25 @@ const Header = () => {
           >
             Get in touch
           </a>
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="text-2xl focus:outline-none"
-            aria-label="Toggle dark mode"
-          >
-            {darkMode ? <FiSun /> : <FiMoon />}
-          </button>
+          <div className="relative flex items-center">
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className={`w-20 h-10 flex items-center rounded-full p-1 ${
+                darkMode ? 'bg-yellow-500' : 'bg-yellow-400'
+              }`}
+              aria-label="Toggle dark mode"
+            >
+              <div
+                className={`w-8 h-8 flex items-center justify-center rounded-full  transform transition-transform duration-500 ${
+                  darkMode
+                    ? 'bg-gray-800 translate-x-8'
+                    : 'bg-[#023363] translate-x-0'
+                }`}
+              >
+                {darkMode ? <FiMoon className="text-white" /> : <FiSun className="text-white" />}
+              </div>
+            </button>
+          </div>
         </div>
 
         <div className="lg:hidden">
@@ -155,13 +167,23 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="flex items-center space-x-4 w-full justify-between">
+          <div className="relative flex items-center">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="text-2xl focus:outline-none"
+              className={`w-20 h-10 flex items-center rounded-full p-1 ${
+                darkMode ? 'bg-yellow-500' : 'bg-yellow-400'
+              }`}
               aria-label="Toggle dark mode"
             >
-              {darkMode ? <FiSun /> : <FiMoon />}
+              <div
+                className={`w-8 h-8 flex items-center justify-center rounded-full  transform transition-transform duration-500 ${
+                  darkMode
+                    ? 'bg-[#010d19] translate-x-8'
+                    : 'bg-[#023363] translate-x-0'
+                }`}
+              >
+                {darkMode ? <FiMoon className="text-white" /> : <FiSun className="text-white" />}
+              </div>
             </button>
           </div>
         </div>
